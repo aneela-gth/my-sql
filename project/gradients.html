@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradients</title>
+    <style>
+        .parent1{
+            border:1px solid black;
+            /* border-radius: 200px; */
+            width:400px;
+            height: 400px;
+            background-image: radial-gradient( blue 10% 20%,pink 20% 30%,yellow 30% 40%, green 50% 60%,red 60% 70%, black 70% 80%,white 80% 90%,orange 90% 100%);
+        }
+        .parent2{
+            border:1px solid black;
+            border-radius: 400px;
+            width:400px;
+            height: 400px;
+            background-image: conic-gradient( orange,red 10% 20%,black 20% 30%,blue 40% 50%,pink 50% 70%,yellow 70% 80%,blueviolet 80% 90%);
+        }
+        .parent3{
+             border:1px solid black;
+            width:400px;
+            height: 400px;
+            background-image: linear-gradient(green 10% 20%,gold 20% 30%,lightblue 10% 20%,blueviolet 30% 40%,pink 50% 60%,red 70% 80%)
+        }
+    </style>
+</head>
+<body>
+    <div class="parent1">
+        <h1></h1>
+    </div>
+    <div class="parent2"></div>
+    <div class=parent3></div>
+    
+</body>
+</html>

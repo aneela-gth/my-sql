@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Cake Animation</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        #cake {
+            display: block;
+            position: relative;
+            margin: -10em auto 0 auto;
+        }
+
+        .layer {
+            width: 200px;
+            height: 30px;
+            background:coral;
+            margin: 30px 0;
+            border-radius: 5px;
+            animation:backwards;
+        }
+
+        .fuego {
+            border-radius: 100%;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            margin-left: -2.6px;
+            width: 6.6666667px;
+            height: 18px;
+            background:chocolate;
+            animation: pulse 1s infinite;
+        }
+
+        .fuego:nth-child(1) {
+            animation: fuego 2s 6.5s infinite;
+        }
+
+        .fuego:nth-child(2) {
+            animation: fuego 1.5s 6.5s infinite;
+        }
+
+        .fuego:nth-child(3) {
+            animation: fuego 1s 6.5s infinite;
+        }
+
+        @keyframes fuego {
+            0% { transform: translateY(0); opacity: 1; }
+            50% { transform: translateY(-10px); opacity: 0.5; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        h1 {
+            margin-top: 2em;
+            text-align: center;
+            animation: pulse 3s infinite;
+    
+        }
+
+        .heart {
+            font-size: 5em;
+            margin-top: 0em;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cake">
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="fuego"></div>
+        <div class="fuego"></div>
+        <div class="fuego"></div>
+    </div>
+
+    <h1>Happy Birthday!</h1>
+    <div class="heart">❤️</div>
+</body>
+
+</html>
