@@ -16,6 +16,11 @@ print(score_board)
 print(shanu)
 print(aneela)
 
+import copy
+x=[[1,2,3],[4,5],6]
+shallow=copy.copy(x)
+
+
 #deeppcopy
 import copy
 info={'detils':{'name':'tharun','city':'hyd','age':23}}
@@ -39,3 +44,7 @@ print(suppu)
 print(aneela)
 print(sreevani)
 print(sharanya)
+
+import copy
+x=[[1,2,3],[4,5],6]
+shallow=copy.deepcopy(x)
