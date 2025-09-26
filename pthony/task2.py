@@ -223,6 +223,91 @@ for i in range(n,0,-1):
 # for i in range(1,5+1):
 #    5*=i
 #    print(i)
+
+# sum of natural numbers
+# n=5
+sum=0
+for i in range(5):
+    sum+=i
+    print(i)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 
 
@@ -291,10 +376,13 @@ print(a)'''
 # print(z.find("n"))
 # print("aneela",startwith("an"))
 # print(z.split(""))
-list=["i","am","a","python","developer"]
+# list=["i","am","a","python","developer"]
 # print("".join(list))
 # print("123".isdigit())
 # print("abc".isalpha)
 # print("abc123".isalnum())
 # print("HELL".isupper())
-print("hello".swapcase())
+# print("hello".swapcase())
+
+
+
