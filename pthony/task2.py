@@ -225,15 +225,16 @@ for i in range(n,0,-1):
 #    print(i)
 
 # sum of natural numbers
-# n=5
-sum=0
-for i in range(5):
-    sum+=i
-    print(i)
+# # n=5
+# sum=0
+# for i in range(5):
+#     sum+=i
+#     print(i)
 
-
-
-
+def sum(a,b):
+    sum=a+b
+    print(sum)
+sum(2,3)
 
 
 

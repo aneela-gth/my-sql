@@ -21,7 +21,7 @@ No default schema selected; type \use <schema> to set one.
 | 53r                |
 | 53rr               |
 | akhi               |
-| aneela             |
+| aneela             |\
 | information_schema |
 | jntu               |
 | mysql              |

@@ -26,12 +26,12 @@ except mysql.connector.errors.ProgrammingError as e:
     print(e)
 
 # insert value
-'''try:
+try:
     insert_data="""insert into users_info values ("aneelabandi","aneela@gmial.com",10,200)"""
     cursor.execute(insert_data)
     print("value inserted")
 except:
-    print("something went wrong")'''
+    print("something went wrong")
 
 # insert stngle row of data
 '''try:
