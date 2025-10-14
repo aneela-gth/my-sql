@@ -14,7 +14,7 @@ def signup():
         }
         print(f"ur userid is{user_id}")
         users=json.load(f)
-        users["users"].append(user_info)
+        users["users"].append()
     with open("../data/data.json","w")as f:
         json.dump(users,f)
         print("signup is done")
@@ -26,7 +26,11 @@ def login():
     user=input("entear username or email")
     password=input("enter password")
 
-    with open("../data/data.json","r")as f:
+    with open("../data/duser_infoata.json","r")as f:
         users_data=json.load(f)
-        print("users_data")
-    
+        user_info=users_data["users"]
+        for x in user_info:
+            if ((user==x["user_id"]) or(user==x["email"])and password==x["password"]):
+                print('login sucessfull')
+            else:
+                print("invalid credentials")
