@@ -58,3 +58,32 @@ terms = int(input("Enter the number of terms: "))
 print("Fibonacci Series:")
 for i in range(terms):
     print(fibonacci(i), end=" ")
+
+def sum_nested_list(lst):
+    total = 0
+    for item in lst:
+        if isinstance(item, list):  
+            total += sum_nested_list(item)
+        else:  
+            total += item
+    return total
+
+
+nested_list = [1, [2, 3], [4, [5, 6]], 7]
+result = sum_nested_list(nested_list)
+print("Sum of all numbers:", result)
+
+def sum_nested_list(lst):
+    total = 0
+    for item in lst:
+        if isinstance(item, list):  
+            total += sum_nested_list(item)
+        else:  
+            total += item
+    return total
+
+
+x = [1, 2, 3, [1, 2, 3], 4, 5, 6, [3, 4, 5, [2, 3, 4, [1, 2, 3]]]]
+
+result = sum_nested_list(x)
+print("Sum of all numbers:", result)
