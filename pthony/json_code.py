@@ -31,20 +31,20 @@ with open('product.json','r')as f:
     print(cnvrt_data[1])
 
 
-#1. add few names into the existing list in the file
+# 1. add few names into the existing list in the file
 # remove any name
-# names=['aneela','akhila','sunny']
-# with open("product.json",'w')as f:
-#     json.dump(names,f,indent=4)
-# with open("product.json", "r") as f:
-#     existing_names = json.load(f)
-# print("Before update:", existing_names)
-# new_names = ['naresh', 'naveen']
-# existing_names.extend(new_names)
-# if 'akhila' in existing_names:
-#     existing_names.remove('akhila')
-# with open("product.json", "w") as f:
-#     json.dump(existing_names, f, indent=4)
-# print("After update:", existing_names)
+names=['aneela','akhila','sunny']
+with open("product.json",'w')as f:
+    json.dump(names,f,indent=4)
+with open("product.json", "r") as f:
+    existing_names = json.load(f)
+print("Before update:", existing_names)
+new_names = ['naresh', 'naveen']
+existing_names.extend(new_names)
+if 'akhila' in existing_names:
+    existing_names.remove('akhila')
+with open("product.json", "w") as f:
+    json.dump(existing_names, f, indent=4)
+print("After update:", existing_names)
 
 

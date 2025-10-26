@@ -1,4 +1,4 @@
-// console.log("welocme to js session 53r");
+console.log("welocme to js session 53r")
 // id=prompt("enter employe id:");
 // document.write(id);
 // name=prompt("enter employe name");
@@ -14,5 +14,6 @@
 // designation=prompt("enter employe designation");
 // document.write(designation);
 
-var aneela="playying"
-console.log(aneela)
+// var aneela="playying"
+// console.log(aneela)
+
