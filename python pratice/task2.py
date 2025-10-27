@@ -47,18 +47,71 @@
 # vowel='aeiouAEIOU'
 # v_count=0
 # for i in str:
-#     if i in vowel:  
-#       v_count+=1
-# print(v_count)
+# #     if i in vowel:  
+# #       v_count+=1
+# # print(v_count)
 
-# 7. Check if one number is a multiple of another
-a=int(input("enter the first number(a):"))
-b = int(input("Enter the second number (b): "))
-if b == 0:
-    print("Division by zero is not allowed.")
-elif a % b == 0:
-    print(f"{a} is a multiple of {b}")
+# # 7. Check if one number is a multiple of another
+# a=int(input("enter the first number(a):"))
+# b = int(input("Enter the second number (b): "))
+# if b == 0:
+#     print("Division by zero is not allowed.")
+# elif a % b == 0:
+#     print(f"{a} is a multiple of {b}")
+# else:
+#     print(f"{a} is not a multiple of {b}")
+
+# # 8. Create a simple calculator using if-else
+# num1=float(input("entear a number"))
+# operator=input("entear an operator(+,-,*,/):")
+# num2=float(input("enter the second number:"))
+# if operator=='+':
+#     result=num1-num2
+#     print(f"{num1}+{num2}=result")
+# elif operator=='-':
+#     result=num1-num2
+#     print(f'{num1}-{num2}={result}')
+# elif operator=='*':
+#     result=num1*num2
+#     print(f'{num1}*{num2}={result}')
+# else:
+#     print("invalid operator please use +,-,*or/")
+
+# # 9. Check if a number is within a given range
+# num = float(input("Enter a number: "))
+# lower = float(input("Enter the lower bound of the range: "))
+# upper = float(input("Enter the upper bound of the range: "))
+
+# # Check if the number is within the range
+# if lower <= num <= upper:
+#     print(f"{num} is within the range {lower} to {upper}.")
+# else:
+#     print(f"{num} is not within the range {lower} to {upper}.")
+
+
+# # 10. Check if a person qualifies for a discount
+# age=int(input("entear a number"))
+# is_member=input("age you a number (yes/no):").lower()
+# if age<12:
+#     print("you qualify for a child discount")
+# elif age>=60:
+#     print("you qualify for a senior citizen discount")
+# elif is_member=="yes":
+#     print("you qualify for a member discount")
+# else:
+#     print("you do not qualify for a discount")
+
+
+# 11. Check if a character is uppercase, lowercase, digit, or special character
+char = input("Enter a single character: ")
+if len(char)!=1:
+    print("please enter exactly one character")
 else:
-    print(f"{a} is not a multiple of {b}")
-
-
+    if char.isupper():
+        print("the character is an uppercase letter")
+    elif char.islower():
+      print("The character is a lowercase letter.")
+    elif char.isdigit():
+        print("The character is a digit.")
+    else:
+        print("The character is a special character.")

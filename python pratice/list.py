@@ -43,12 +43,12 @@
 # else:
 #     print("pineaple is not in the fruites")
 
-# 10.Loop through a list and print each item.
+# # 10.Loop through a list and print each item.
 # list=[1,2,3,4,5,6,7,8,9]
 # for list in  list:
 #     print(list)
 
-# 11.Sort a list in ascending order.
+# # 11.Sort a list in ascending order.
 # list=[2,5,7,3,9,7,6,1,4,8]
 # list.sort()
 # print(list)
