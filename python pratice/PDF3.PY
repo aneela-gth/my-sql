@@ -347,11 +347,50 @@
 # else:
 #     print(f"{num}is not a neonnumber")
 
+# num=9
+# temp=num
+# sqr=temp*temp
+# sum=0
+# while temp!=0:
+#     sum=0
+#     rem=sqr%10
+#     sum=sum+rem
+#     temp=temp//10
+# if(temp==num):
+#     print(f"{num} is neonnumber")
+# else:
+#     print(f"{num}is not a neonnumber")
+
 # 27. Strong Number Check
 # Question: Check if a number is a strong number. Explanation: Sum of factorial of digits equals the number. - Input: 145 - Output: Strong number
+# num=145
+# temp=num
+# fast_sum=0
+# while temp!=0:
+#     rem=temp%10
+#     fact=1
+#     for i in range(2,rem+1):
+#         fact *= i
+#         fact_sum += fact
+#         temp=temp//10
+# if fact_sum==num:
+#     print("stronge number")
+# else:
+#     print("not strong number")
+
 
 # 28. Harshad Number Check
 # Question: Check if a number is divisible by the sum of its digits. Explanation: Calculate digit sum and check divisibility. - Input: 18 - Output: Harshad number
+# num=18
+# sum=0
+# while num!=0:
+#     rem=num%10
+#     sum=sum+rem
+#     num=num//10
+# if num%sum==0:
+#     print("harshad number")
+# else:
+#     print("not harshad number")
 
 # 29. Fibonacci Series
 # Question: Print the Fibonacci series up to n terms. Explanation: Start with 0, 1 and continue with sum of last two. - Input: n = 5 - Output: 0 1 1 2 3

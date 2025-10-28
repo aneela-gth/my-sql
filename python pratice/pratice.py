@@ -234,3 +234,45 @@
 #     print("negitive")
 # else:
 #     print("zero")
+
+
+# num=143
+# sum=0
+# temp=num
+# digit=len(str(num))
+# while temp>0:
+#     rem=temp%10
+#     sum+=rem**digit
+#     temp=temp//10
+# if(sum==num):
+#     print("amgstrong")
+# else:
+#     print("not an amstronge")
+
+# num=121
+# temp=num
+# rev=0
+# while num>0:
+#     rem=num%10
+#     rev=rev*10+rem
+#     num=num//10
+# if(rev==temp):
+#     print("palindrom")
+# else:
+#     print("not a palindrom")
+
+# name="madam"
+# rev=""
+# for i in name:
+#   rev=i+rev
+# if(rev==name):
+#   print("palindrom")
+# else:
+#   print("not palindrom")
+
+
+
+
+
+
+

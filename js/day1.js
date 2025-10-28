@@ -17,3 +17,7 @@ console.log("welocme to js session 53r")
 // var aneela="playying"
 // console.log(aneela)
 
+function ane(a,b){
+console.log(a+b)
+}
+ane(2,3)

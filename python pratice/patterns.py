@@ -50,15 +50,20 @@
 #         s+="*"+" "
 #     print(s)
 
-# num=121
-# rev=0
-# temp=num
-# while num!=0:
-#     rem=num%10
-#     rev=rev*10+rem
-#     num=num//10
-# if temp==rev:
-#     print("palindrom")
-# else:
-#     print("not palindrom")
+# 2.	Solid Rectangle Pattern
+# n=3
+# n=5
+# for row in range(1,n+1):
+#     for col in range(1,2*n+1):
+#         print("*",end=" ")
+#     print()
+
+
+# 3.Right-Angled Triangle (Left-Aligned)
+n=5
+for i in range(1,0,-1):
+    for j in range(1,n+1):
+        print("*",end=" ")
+    print()
+
 

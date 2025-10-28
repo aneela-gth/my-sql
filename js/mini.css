@@ -23,6 +23,9 @@ body{
     background-color: rgb(106, 105, 105);
     border: 2px solid ridge;
     box-shadow: 0px 0px 30px rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .clock span{
     position:absolute;
@@ -37,5 +40,23 @@ body{
 }
 .clock::before{
     content:'';
-    position:ab
+    position:absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: aliceblue;
+}
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i{
+    position: absolute;
+    background-color: aliceblue;
+    width:4px ;
+    height:70px ;
+    border-radius: 8px;
+
 }

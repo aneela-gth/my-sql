@@ -102,16 +102,18 @@
 #     print("you do not qualify for a discount")
 
 
-# 11. Check if a character is uppercase, lowercase, digit, or special character
-char = input("Enter a single character: ")
-if len(char)!=1:
-    print("please enter exactly one character")
-else:
-    if char.isupper():
-        print("the character is an uppercase letter")
-    elif char.islower():
-      print("The character is a lowercase letter.")
-    elif char.isdigit():
-        print("The character is a digit.")
-    else:
-        print("The character is a special character.")
+# # 11. Check if a character is uppercase, lowercase, digit, or special character
+# char = input("Enter a single character: ")
+# if len(char)!=1:
+#     print("please enter exactly one character")
+# else:
+#     if char.isupper():
+#         print("the character is an uppercase letter")
+#     elif char.islower():
+#       print("The character is a lowercase letter.")
+#     elif char.isdigit():
+#         print("The character is a digit.")
+#     else:
+#         print("The character is a special character.")
+
+# 12. Check if a person is eligible to vote
