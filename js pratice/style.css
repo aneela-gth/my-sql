@@ -1,0 +1,9 @@
+*{
+    padding:0;
+    margin:0;
+}
+.body{
+    background: url("./green-snake-game-character-bqvxt2p5oibadgqn.jpg");
+    min-height: 100vh;
+    background-color: brown;
+}

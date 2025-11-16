@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom&eventes</title>
+    <style>
+        .box{
+            
+            height: 100px;
+            width: 100px;
+            background-color: lightblue;
+            border: 2px solid black;
+            border: 2px solid navy;
+            margin: 10px;
+            transition: transform 0.3s,background-color 0.3s;
+            cursor: pointer;
+        
+        }
+    </style>
+    
+</head>
+<body>
+    <p id="one"></p>
+    <button onclick="robo()">click me</button>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <from>
+        <input  type="text" onfocus="styling()"><br><br>
+        <input  type="text" onfocus="styling()"><br><br>
+        <input  type="text" onfocus="styling()">
+
+    </from>
+    
+    
+
+    <script>
+
+        function robo(){
+            var plan=document.querySelector("#one");
+            plan.innerHTML = "My name is Aneela";
+            
+        }
+       
+        var boxes=document.getElementsByClassName("box");
+        for (var i=0; i < boxes.length; i++){
+            var box=boxes[i];
+              box.onmouseover = function() {
+        box.style.transform = "scale(1.2)"; 
+      };
+        box.onmouseout = function() {
+        box.style.transform = "scale(1)"; 
+      };
+        box.onclick = function() {
+        box.style.backgroundColor = "lightgreen"; 
+      };
+        }
+
+      function styling(){
+        var inp=document.getElementsByTagName("input")
+        inp.style.backgroundColor="blue"
+      }
+
+    </script>
+
+    
+</body>
+</html>

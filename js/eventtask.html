@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Events Practice</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #d0d5a2, #a0d54b);
+      color: #050505;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      max-width: 800px;
+      margin: 30px auto;
+    }
+
+    button {
+      background: #d9981e;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    input, select {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      width: 250px;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: gray;
+      border-radius: 10px;
+      margin: 10px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+    }
+
+    form {
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    hr {
+      border: 1px solid rgba(255,255,255,0.3);
+      margin: 25px 0;
+    }
+  </style>
+</head>
+
+<body onload="alert('Welcome! Page Loaded Successfully.')">
+  <h1> JavaScript Events </h1>
+
+  <div class="container">
+
+    <h3>Task 1: onclick Event</h3>
+    <button onclick="alert('Button Clicked Successfully!')">Click Me</button>
+    <hr>
+
+    <h3>Task 2: onmouseover Event</h3>
+    <div class="box" onmouseover="this.style.background='green'">Hover Me</div>
+    <hr>
+
+    <h3>Task 3: onmouseout Event</h3>
+    <div class="box" onmouseover="this.style.background='red'" onmouseout="this.style.background='gray'">Hover Me</div>
+    <hr>
+
+    <h3>Task 4: onfocus Event</h3>
+    <input type="text" placeholder="Click to focus"
+      onfocus="this.style.background='yellow'"
+      onblur="this.style.background='white'">
+    <hr>
+
+    <h3>Task 5: onsubmit Event</h3>
+    <form onsubmit="return validateForm()">
+      <label>Enter Name: </label>
+      <input type="text" id="nameInput">
+      <button type="submit">Submit</button>
+    </form>
+    <hr>
+
+    <h3>Task 6: onload Event</h3>
+    <p>(Already displayed when page loaded)</p>
+    <hr>
+
+    <h3>Task 7: onchange Event</h3>
+    <select onchange="alert('You selected: ' + this.value)">
+      <option value="">Select a topic</option>
+      <option value="HTML">HTML</option>
+      <option value="CSS">CSS</option>
+      <option value="JavaScript">JavaScript</option>
+    </select>
+    <hr>
+
+    <h3>Task 8: Combined Events Project</h3>
+    <form onsubmit="return validateCombinedForm()">
+      <input type="text" id="combinedName" placeholder="Enter your name"
+        onfocus="this.style.background='lightyellow'"
+        onblur="this.style.background='white'"><br><br>
+
+      <select id="topicSelect" onchange="alert('Topic selected: ' + this.value)">
+        <option value="">Choose a topic</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+      </select><br><br>
+
+      <button type="submit" onmouseover="this.style.background='green'" onmouseout="this.style.background='#007bff'">
+        Submit
+      </button>
+    </form>
+  </div>
+
+  <footer>© 2025 JavaScript Events Practice by <b>Bandi Aneela</b></footer>
+
+  <script>
+    function validateForm() {
+      let name = document.getElementById("nameInput").value;
+      if (name.trim() === "") {
+        alert("Name is required");
+        return false;
+      } else {
+        alert("Form Submitted Successfully!");
+        return true;
+      }
+    }
+
+    function validateCombinedForm() {
+      let name = document.getElementById("combinedName").value;
+      if (name.trim() === "") {
+        alert("Please enter your name!");
+        return false;
+      } else {
+        alert("Form submitted successfully!");
+        return true;
+      }
+    }
+  </script>
+</body>
+</html>

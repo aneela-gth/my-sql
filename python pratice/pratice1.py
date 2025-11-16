@@ -5,6 +5,13 @@
 #     rev=i+rev
 # print(rev)
 
+# name="level"
+# rev=""
+# for i in name:
+#     rev=i+rev
+# print(rev)
+
+
 # 2.check palindrom
 # num=121
 # rev=0
@@ -18,6 +25,20 @@
 # else:
 #     print("not palindrom")
 
+
+# num=323
+# rev=0
+# temp=num
+# while num>0:
+#     rem=num%10
+#     rev=rev*10+rem
+#     num=num//10
+# if rev==temp:
+#     print("palindrom")
+# else:
+#     print("not a palindrom")
+
+
 # Count Vowels in String
 # name="pythonfullstck"
 # vowels="aeiouAEIOU"
@@ -30,6 +51,7 @@
 #         c_count+=1
 # print(v_count)
 # print(c_count)
+
 
 # name="aneela"
 # vowels="aeiouAEIOU"
@@ -47,6 +69,7 @@
 #     print("perfectnumber")
 # else:
 #     print("not perfectnumber")
+
 
 # # neon:
 # num=9
@@ -224,6 +247,45 @@
 #         min=digit
 #     num=num//10
              
+# name="naresh"
+# vowiles="aeiou"
+# v_count=0
+# c_count=0
+# for i in name:
+#     if i in vowiles:
+#         v_count+=1
+#     else:
+#         c_count+=1
+# print(v_count)
+# print(c_count)
 
 
+# name="naresh"
+# vowles="aeiou"
+# for i in name:
+#     if i not in vowles:
+#         print(i)
 
+# m=10
+# n=30
+# for i in range(m,n+1):
+#     if i>1:
+#         for j in range(2,int(i**0.5)):
+#             if i%j==0:
+#                 break
+#             else:
+#                 print(i,end=" ")
+
+# n=10
+# for i in range(1,n+1):
+#     if i%2!=0:
+#         continue
+#     print(i,end=" ")
+
+# # swape numbers:
+# a=10
+# b=20
+# temp=a
+# a=b
+# b=temp
+# print("afteraar swapping:a=",a,"b=",b)

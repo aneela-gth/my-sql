@@ -57,6 +57,7 @@
 #     fact=fact*i
 # print(fact)
 
+
 # 7. Sum of m to n Numbers
 # Question: Write a program to find the sum of all numbers from m to n. Explanation: Loop from m to n and add values. - Input: m = 3, n = 6 - Output: 18
 # m=3
@@ -80,7 +81,6 @@
 # 9. Print Factors of a Number
 # Question: Write a program to print all factors of a given number. Explanation: Check divisibility of number from 1 to n. - Input: n = 6 - Output: 1 2 3 6
 # num=6
-# count=0
 # for i in range(1,num+1):
 #   if num%i==0:
 #     print(i,end=" ")
@@ -152,7 +152,7 @@
 #     rev=ch+rev
 # if str==rev:
 #   print("palindrom")
-# else:
+# else:'''
 #    print("not palindrom")
 
 # name="Madam"
@@ -218,6 +218,22 @@
 # 19. Armstrong Number Check
 # Question: Check if a number is an Armstrong number. Explanation: Sum of cube of digits equals the number. - Input: 153 - Output: Armstrong number
 # amstrong means:degites based (square  or) and add the value is called an amgstrong
+# num=153
+# len=0
+# temp=0
+# while num>0:
+#     len+=1
+#     num=num//10
+# sum=0
+# ans=0
+# while num>0:
+#     rem=num%10
+#     sum=sum*10+rem
+#     num=num//10
+# if(sum==temp):
+#     print("amstronge number")
+# else:
+#     print("not a amstrong")
 
 # num=153
 # len=0
@@ -424,8 +440,10 @@
 # while temp > 0:
 #     rem=temp%10
 #     sum+=rem
-#     temp//10
+#     temp=temp//10
 # if sum==num:
 #     print("neonnumber")
 # else:
 #     print("not a neonnumber")
+
+

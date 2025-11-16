@@ -116,9 +116,9 @@
 # members=17
 # members_per_car=5
 # cars_required=members//members_per_car
-# if members%members_per_car!=0:
+# if members%members_per_car!=0:                                        
 #     cars_required+=1
-#     print(cars_required)
+#         #     print(cars_required)
 
 # 14. Second Biggest Among Three Numbers
 # Question: Find the second largest number among three inputs. Explanation: Use sorting or nested conditions to find the second largest value. - Input: A = 10, B = 25, C = 18 - Output: Second biggest: 18
@@ -140,20 +140,116 @@
 # else:
 #     print("not leep year")
 
-# second method:    
-year=2028
-leap=False
-if year%4==0:
-    if year%100==0:
-        if year%400==0:
-            leap=True
-        else:
-            leap=False
-    else:
-        leap=True
-else:
-    leap=False
-if leap:
-    print("leap year")
-else:
-    print("not leap year")
+# # second method:    
+# year=2028
+# leap=False
+# if year%4==0:
+#     if year%100==0:
+#         if year%400==0:
+#             leap=True
+#         else:
+#             leap=False
+#     else:
+#         leap=True
+# else:
+#     leap=False
+# if leap:
+#     print("leap year")
+# else:
+#     print("not leap year")
+
+# num=123
+# sum=0
+# while num>0:
+#     rem=num%10
+#     sum+=rem
+#     num=num//10
+# print(sum)
+
+# members=17
+# car_members=5
+# # car_req=members//car_members
+# # if members%car_req!=0:
+# #     car_req+=1
+# #     print(car_req)
+
+# n=4
+# for i in range(1,n+1):
+#     for k in range(n-i):
+#         print(" ",end=" ")
+#     for j in range(i-1):
+#         print("*",end=" ")
+#     for m in range(i):
+#         print("*",end=" ")
+#     print()
+# for i in range(n,0,-1):
+#     for k in range(n-i):
+#         print(" ",end=" ")
+#     for j in range(i-1):
+#         print("*",end=" ")
+#     for m in range(i):
+#         print("*",end=" ")
+#     print()
+
+
+# perimied       
+# n=4
+# for i in range(1,n+1):
+#     for j in range(n-i,0,-1):
+#         print(" ",end=" ")
+#     for k in range(2*i-1):
+#         print("*",end=" ")
+#     print()
+
+# n=4
+# for i in range(n,0,-1):
+#     for j in range(n-i,0,-1):
+#         print(" ",end=" ")
+#     for k in range(2*i-1):
+#         print("*",end=" ")
+#     print()
+
+# n=5
+# for i in range(1,n+1):
+#     s=" "
+#     for j in range(1,n+1):
+#         s+=str(j)+" "
+#     print(s)
+    
+
+# n=5
+# for i in range(1,n+1):
+#     s=" "
+#     for j in range(1,n+1):
+#         s+=str(i)+""
+#     print(s)
+
+# r=5
+# for i in range(1,r+1):
+#     str=" "
+#     for j in range(r,r+1):
+#         if i==1 or i==r or j==1 or j==r:
+#             str+="*"+" "
+#         else:
+#             str+=" "+" "
+#         print(str)
+
+
+# r=5
+# for i in range(r):
+#     str=" "
+#     for j in range(r):
+#         if j==0 or j==r-1 or i==j or j==r-1 or i==j:
+#             str+="*"+" "
+#         else:
+#             str+=" "+" "
+#         print(str)
+
+num=123
+len=0
+while num>0:
+    rem=num%10
+    len+=rem
+    num=num//num
+print(len)
+

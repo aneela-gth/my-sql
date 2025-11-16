@@ -4,20 +4,22 @@
 # # 3.area of traingeal
 # base=int(input("entear value"))
 # height=int(input("entear value"))
-# print(base*height)
+# a=1/2*(base*height)
+# print(a)
+
 # # 4.perimeter of square
 # side=int(input("entear value"))
 # print(4*side)
 
-# 5.
+# # 5.
 # length=int(input("entear value"))
 # breadth=int(input("entar value"))
-# print(length*breadth)
+# print(2*(length+breadth))
 
 # 5.perimeter of rectangle
 # length=int(input("entear length"))
 # breath=int(input("entear breath"))
-# pr=2*(length+breath)
+# pr=2*(length+breath)0
 # print(pr)
 
 # 6.perimeter of triangle
