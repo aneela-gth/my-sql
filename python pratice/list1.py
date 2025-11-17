@@ -403,3 +403,27 @@
 # 40. Chunk List into Smaller Lists
 # Problem: Break a list into chunks of given size. Input: [1, 2, 3, 4, 5, 6], chunk size 2 Output: [[1, 2], [3, 4], [5, 6]]
 
+# list1=[1,2,3,4,5]
+# list2=[6,7,8]
+# merged=[]
+# merged=list1+list2
+# print(merged)
+# import random
+# list=[1,2,3,4,5,6,2,3,2,3,2]
+# li=random.randint(1,10)
+# print(list[4])
+list=[1,2,3,4]
+# print(list[0],list[3])
+# list.append(5)
+# print(list)
+# list.insert(1,20)
+# print(list)
+# list.remove(2)
+# list.pop(1)
+# list.reverse()
+
+# print(4 in list)
+# print(len(list))
+# list.count(2)
+# list.index(3)
+# print(list)
