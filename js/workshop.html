@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,5 +9,79 @@
     <div>
         
     </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theme Selector</title>
+    <style>
+        body.dark-mode {
+            background-color: #222;
+            color: white;
+        }
+        body.light-mode {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body class="light-mode">
+
+    <h2>Select Theme</h2>
+
+    <label>
+        <input type="radio" name="theme" value="Light" checked>
+        Light
+    </label>
+
+    <label>
+        <input type="radio" name="theme" value="Dark">
+        Dark
+    </label>
+
+    <div id="themeMsg" style="margin-top: 15px; font-weight: bold;">
+        Current theme: Light
+    </div>
+
+    <script>
+        // Select radio buttons
+        const themeRadios = document.getElementsByName("theme");
+
+        // Select message div
+        const themeMsg = document.querySelector("#themeMsg");
+
+        // Add onchange event to each radio
+        themeRadios.forEach(radio => {
+            radio.onchange = () => {
+                const value = radio.value;
+
+                // Update message
+                themeMsg.textContent = "Current theme: " + value;
+
+                // Apply CSS class
+                if (value === "Dark") {
+                    document.body.classList.add("dark-mode");
+                    document.body.classList.remove("light-mode");
+                } else {
+                    document.body.classList.add("light-mode");
+                    document.body.classList.remove("dark-mode");
+                }
+            };
+        });
+
+        // BONUS: beforeunload event
+        window.onbeforeunload = function (e) {
+            let selectedTheme = "Light";
+
+            themeRadios.forEach(r => {
+                if (r.checked) selectedTheme = r.value;
+            });
+
+            e.preventDefault();
+            e.returnValue = "Do you really want to leave with " + selectedTheme + " mode?";
+        };
+    </script>
+
 </body>
 </html>

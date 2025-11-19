@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="day">today is monday</p>
+     <img src="dog.jpeg">
+     <div id="container">
+        <p class="abc">welcome to javascript</p>
+     </div>
+     <button disabled>clickme</button>
+   
+    <script>
+    var daytoday = document.getElementById("day");
+    daytoday.setAttribute("class", "date");
+    var days = document.querySelector(".date");
+    days.style.color = "blue";
+
+   
+    var imge = document.querySelector("img");
+    var rel = imge.getAttribute("src");
+    console.log(rel);
+
+    var head1 = document.createElement("h1");
+    head1.innerHTML = "My name is Aneela";
+    document.body.appendChild(head1);
+
+    var btn=document.querySelector("button");
+    btn.removeAttribute("disabled");
+
+     var parent=document.getElementById("container");
+     var child=document.querySelector("abc");
+      parent.removechild("child")
+
+
+    
+
+</script>
+</body>
+</html>

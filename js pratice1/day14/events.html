@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body onload="showmessage()">
+    <h1>task1</h1>
+    <button onclick="alert('button clicked succefully')">clekme</button>
+    
+    <h1>task2</h1>
+    <div 
+    style="width:100px; height:100px; background-color:lightblue; border:2px solid black;"
+    onmouseover="this.style.backgroundColor='green'">
+    </div>
+    <h1>task3</h1>
+    <div 
+    style="width:100px; height:100px; background-color: rgb(120, 121, 118); border: 2px solid black;"
+    onmouseover="this.style.backgroundColor='yellow'"
+    onmouseout="this.style.backgroundColor='pink'">
+    </div>
+    <h1>task4</h1>
+    <input text="text" placeholder="click me" 
+    onfocus="this.style.backgroundColor='yellow'">
+    <h1>task5</h1>
+
+    <from onsubmit="return submitfrom()">
+        <label>enter name:</label>
+        <input type="text" id="nameinput">
+        <button type="submit">submit</button>
+    </from>
+    <h1>task7</h1>
+    <select onchange="showSelectedValue()" id="course">
+    <option value="">--Select a Course--</option>
+    <option value="HTML">HTML</option>
+    <option value="CSS">CSS</option>
+    <option value="JavaScript">JavaScript</option>
+    </select>
+
+<h2>Mini Form with Multiple Events</h2>
+
+<form onsubmit="return validateForm()">
+    <label>Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" 
+           onfocus="focusInput(this)" onblur="blurInput(this)"><br><br>
+
+    <label>Select Topic:</label>
+    <select id="topic" onchange="topicChanged()">
+        <option value="">--Select--</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+    </select><br><br>
+
+<button type="submit" id="submitBtn" 
+            onmouseover="hoverBtn(this)" 
+            onmouseout="unhoverBtn(this)">
+        Submit
+    </button>
+
+    <script>
+        function submitfrom(){
+            var name=document.getElementById("nameinput").value;
+            if(namevalue.trim()===""){
+                alert("name is required");
+                return falese;
+            }
+            document.getElementById("#msg").innerText="from submitted succesfully"
+            return false;
+        }
+         function showmessage() {
+            alert("Welcome! Page Loaded Successfully.");
+         }
+
+         function showselectedvalue(){
+            var selected=document.querySelector("#course").value;
+            alert("you selected:"+selected);
+         }
+
+
+
+
+function welcomeMessage() {
+      alert("Welcome! Page Loaded Successfully.");
+  }
+  function focusInput(element) {
+      element.style.backgroundColor = "#d1ffd1";
+  }
+  function blurInput(element) {
+      element.style.backgroundColor = "";
+  }
+  function hoverBtn(btn) {
+      btn.style.backgroundColor = "#ffcc00"; 
+  }
+  function unhoverBtn(btn) {
+      btn.style.backgroundColor = ""; 
+  }
+  function topicChanged() {
+      let selected = document.querySelector("#topic").value;
+      if(selected !== "") {
+          alert("You selected: " + selected);
+      }
+  }
+          function validateForm() {
+      let nameValue = document.querySelector("#name").value;
+      if(nameValue.trim() === "") {
+          alert("Name is required");
+          return false; 
+      }
+
+      document.querySelector("#message").innerHTML = "Form Submitted Successfully!";
+      return false;
+  }
+        
+
+
+        
+    </script>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <h1>good ofter</h1>
+    <div>
+        <p>what is your name</p>
+        <button>click here</button><br>
+        <h1 id="one">hello every one</h1>
+        <h3>my name is aneela</h3>
+        <h3>i love my mom and dad</h3>
+        <h3>i like feda movie</h3>
+        <button onclick="changecolor()">click here</button>
+        <p name="fast">sundra said</p>
+        <h2 name="fast">sundari replied</h2>
+        <h4 name="fast">with dinga</h4>
+        <p class="slow">dingi went</p>
+        <h5 class="slow">to depression</h5>
+        <button onclick="changee()">changehere</button>
+
+    </div>
+    <script>
+        document.write("good ofter")
+        var greeting = document.getElementById('one')
+        greeting.style.color = "blue"
+        greeting.style.backgroundColor= "pink"
+        greeting.textContent="bye  my dear friend"
+       var rhymes= document.getElementsByTagName('h3')
+       function changecolor(){
+        for(i=0; i<rhymes.length; i++){
+        rhymes[i].style.color="red"
+       }
+    }
+    var faster= document.getElementsByName('fast')
+    function changee(){
+        for (i=0; i<faster.length; i++){
+            faster[i].style.fontsize="40px";
+        }
+        
+    }
+    document.getElementsByClassName('slow')[0].style.color="red"
+    document.getElementsByClassName('slow')[1].style.backgroundColor="blue"
+
+    
+        
+    </script>
+    
+</body>
+</html>

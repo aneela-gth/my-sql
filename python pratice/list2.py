@@ -96,9 +96,27 @@
 # c=list.count(1)
 # print(c)
 
-# Find the index of a number.
+# # Find the index of a number.
+# import random
+# list=[1,2,3,4,5,6,7,8]
+# rade=random.choice(list)
+# print(rade)
+
 # Concatenate two lists.
+# list1=[1,2,3]
+# list2=[4,5]
+# merged=list1+list2
+# print(merged)
+
+
 # Repeat a list 3 times.
+# list=[1,2,3]
+# rep=[]
+# for i in range(3):
+#     for j in list:
+#         rep.append(j)
+# print(rep)
+
 # Print every second element.
 # Print elements from index 2 to 5.
 # Check if all elements are positive.
@@ -109,11 +127,51 @@
 # Square every number in a list.
 # Filter even numbers from a list.
 # Filter odd numbers from a list.
-# Find duplicates in a list.
+
+# # Find duplicates in a list.
+# list = [1, 2, 2, 3, 4, 3, 5, 2]
+# duple=[]
+# for i in list:
+#     if list.count(i)>1 and i not in duple:
+#         duple.append(i)
+# print(duple)
+
 # Remove duplicates from a list.
+# list = [1, 2, 2, 3, 4, 3, 5]
+# new_list=[]
+# for i in list:
+#     if i not in new_list:
+#         new_list.append(i)
+# print(new_list)
+
 # Get unique elements using set().
+# list = [1, 2, 2, 3, 4, 3, 5]
+# uni_set=set(list)
+# print(uni_set)
+
 # Check if a list is empty.
+# my_list = []
+
+# if not my_list:
+#     print("The list is empty")
+# else:
+#     print("The list is not empty")
+
 # Initialize a list of n zeros.
+
+# n = 5
+# zeros_list = [0] * n
+# print(zeros_list)
+
 # Swap two elements in a list.
+a=[1,2,3]
+b=[4,5,6]
+a,b=b,a
+print(a)
+print(b)
+
+
+
+
 # Get last element of a list.
 # Convert a string to a list of chars.

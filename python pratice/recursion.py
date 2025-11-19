@@ -86,17 +86,25 @@
 # car1.show()
 # car2.show()
 
-# 1️⃣ Encapsulation (Data Hiding)
-class BankAccount:
-    def __init__(self, balance):
-        self.__balance = balance  # private variable
+# # 1️⃣ Encapsulation (Data Hiding)
+# class BankAccount:
+#     def __init__(self, balance):
+#         self.__balance = balance  # private variable
 
-    def deposit(self, amount):
-        self.__balance += amount
+#     def deposit(self, amount):
+#         self.__balance += amount
 
-    def get_balance(self):
-        return self.__balance
+#     def get_balance(self):
+#         return self.__balance
     
-account=BankAccount(1000)
-account.deposit(500)
-print("Current Balance:", account.get_balance())
+# account=BankAccount(1000)
+# account.deposit(500)
+# print("Current Balance:", account.get_balance())
+
+
+def fun(n):
+    if n==6:
+        return
+    print(n)
+    fun(n+1)
+fun(1)

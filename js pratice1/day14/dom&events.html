@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom&eventes</title>
+    <style>
+        .box{
+            
+            height: 100px;
+            width: 100px;
+            background-color: lightblue;
+            border: 2px solid black;
+            margin: 10px;
+            transition: transform 0.3s,background-color 0.3s;
+            cursor: pointer;
+        
+        }
+
+         .dark-mode {
+            background-color: #222;
+            color: white;
+        }
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+        body {
+            transition: all 0.3s ease;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        #themeMsg {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+    </style>
+    
+</head>
+<body class="light-mode">
+  <h1>task1</h1>
+    <p id="one"></p>
+    <button onclick="robo()">click me</button>
+    <h1>task2</h1>
+    <div class="box"></div>
+    <div class="box"></div>
+    <h1>task3</h1>
+    <from>
+        <input  type="text" onfocus="styling()"><br><br>
+        <input  type="text" onfocus="styling()"><br><br>
+        <input  type="text" onfocus="styling()"><br><br>
+
+    </from>
+    <h1>task4</h1>
+    
+    <form onsubmit="man()">
+        
+         <label>Name: </label>
+        <input type="text" id="name"><br><br>
+        <label>eamil: </label>
+        <input type="text" id="email"><br><br>
+        <label>age: </label>
+        <input type="text" id="age"><br><br>
+        
+      <button>submit</button>
+    </form>
+    <h1>task5</h1>
+     
+
+    <lable>
+    
+      <input type="radio" name="theme" value="Light" checked>
+        Light
+    </lable>
+    <label>
+        <input type="radio" name="theme" value="Dark">
+        Dark
+    </label>
+    <div id="themeMsg">Current theme: Light</div>
+
+
+    <script>
+
+        function robo(){
+            var plan=document.querySelector("#one");
+            plan.innerHTML = "My name is Aneela";
+            
+        }
+       
+        var boxes=document.getElementsByClassName("box");
+        for (var i=0; i < boxes.length; i++){
+            var box=boxes[i];
+            box.onmouseover = function() {
+                 box.style.transform = "scale(1.2)"; 
+      };
+        box.onmouseout = function() {
+        box.style.transform = "scale(1)"; 
+      };
+        box.onclick = function() {
+            box.style.backgroundColor = "lightgreen"; 
+      };
+        }
+
+      
+      function styling(element){
+         var ip=document.getElementsByTagName("input")
+         for(var i=0;i<ip.length;i++){
+         ip[i].style.backgroundColor="green"
+         }
+        }
+       
+
+      function man(){
+         let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let age = document.getElementById("age").value;
+
+        if(name.trim() === "" || email.trim() === "" || age.trim() === ""){
+            alert("All fields are required!");
+            return false;
+        }
+      
+        alert("form submit succefully");
+        return false;
+      }
+       const themeRadios = document.getElementsByName("theme");
+    const themeMsg = document.querySelector("#themeMsg");
+
+    function changeTheme() {
+        let selectedTheme = this.value;
+        themeMsg.textContent = "Current theme: " + selectedTheme;
+
+        if (selectedTheme === "Dark") {
+            document.body.classList.add("dark-mode");
+            document.body.classList.remove("light-mode");
+        } else {
+            document.body.classList.add("light-mode");
+            document.body.classList.remove("dark-mode");
+        }
+    }
+     themeRadios.forEach(radio => {
+        radio.onchange = changeTheme;
+    });
+    window.onbeforeunload = function (e) {
+        let currentTheme = Array.from(themeRadios).find(r => r.checked).value;
+        e.preventDefault();
+        e.returnValue = `Do you really want to leave with ${currentTheme} mode?`;
+        return e.returnValue;
+    };
+
+      
+      
+    </script>
+
+    
+</body>
+</html>

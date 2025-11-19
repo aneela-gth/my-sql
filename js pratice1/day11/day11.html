@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function robo(){
+           var plan=document.querySelector("#one")
+           plan.innerHTML="today is friday"
+        }
+        function chitti()
+        {
+            alert("bye");
+        }
+        function robo(){
+            alert("you oresded a key inside the input field");
+    
+        }
+        function styling(){
+            var inp=document.querySelector("input")
+            inp.style.backgroundColor="pink"
+        }
+        function main(){
+            alert("form submit succesfully")
+        }
+         function loading(){
+        alert("page loaded sucessfully")
+         }
+        var name1=document.querySelector("#tent")
+        name1.onchange=function(){
+            console.log("the added content is:"+name1.value)
+
+        }
+        var set=document.querySelector("#set")
+        set.onchange=function(){
+            console.log("the selected city is:"+set,value)
+        }
+
+        
+    </script>
+   
+</head>
+<body onload="loading()"> 
+    <h1 id="one">lets go for party</h1>
+    <button onclick="robo()">click me</button>
+    <button onclick="robo()">on click me</button><br><br>
+    <button ondblclick="chitti()">Duble click me</button><br><br>
+    <button onmouseover="robo()">omousever</button><br><bt=r></br>
+    <button onmouseout="robo()">mouseout</button><br><br>
+    <form>
+        <input type="text" onfocus="styling()">
+    </form><br>
+    <form onsubmit="main()">
+        <input type="text">
+        <button>click me</button>
+    </form><br>
+    <input type="text" id="tent">
+    <select id="set">
+        <option>khammam</option>
+        <option>rebbavaram</option>
+        <option>wyra</option>
+        <option>hyd</option>
+    </select>
+    
+   
+   
+
+
+     
+</body>
+</html>

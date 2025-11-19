@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1>task1</h1>
+    <button onclick="alert('button clicked succefully')">clekme</button>
+    
+    <h1>task2</h1>
+    <div 
+    style="width:100px; height:100px; background-color:lightblue; border:2px solid black;"
+    onmouseover="this.style.backgroundColor='green'">
+    </div>
+    <h1>task3</h1>
+    <div 
+    style="width:100px; height:100px; background-color: rgb(120, 121, 118); border: 2px solid black;"
+    onmouseover="this.style.backgroundColor='yellow'"
+    onmouseout="this.style.backgroundColor='pink'">
+    </div>
+    <h1>task4</h1>
+    <input text="text" placeholder="click me" 
+    onfocus="this.style.backgroundColor='yellow'">
+    <h1>task5</h1>
+
+
+    <from onsubmit="return submitfrom()">
+        <label>enter name:</label>
+        <input type="text" id="nameinput">
+        <button type="submit">submit</button>
+    </from>
+    <script>
+        function submitfrom(){
+            var name=document.getElementById("nameinput").value;
+            if(name.trim()===""){
+                alert("name is required");
+                return falese;
+            }
+            document.getElementById("msg").innerText="from submitted succesfully"
+            return false;
+        }
+        
+    </script>
+
+
+    
+</body>
+</html>

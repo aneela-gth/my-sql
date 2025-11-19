@@ -266,12 +266,31 @@
 # Problem: Find the second lowest value. Input: [5, 1, 4, 2, 3] Output: 2
 
 
+# list=[1, 3, 4, 5, 0]
+# smallest=float("inf")
+# sec_smallest=float("inf")
+# for i in list:
+#     if i<smallest:
+#         sec_smallest=smallest
+#         smallest=i
+#     elif i<sec_smallest and i!=smallest:
+#         sec_smallest=i
+# print(sec_smallest)
 
 
 # 18. Copy List to Another List
 # Problem: Copy the contents of one list to another. Explanation: Use slicing or copy(). Input: [1, 2, 3] Output: [1, 2, 3]
 
+# list=[1, 2, 3]
+# copy_list=[]
+# for i in list:
+#     copy_list.append(i)
+# print(copy_list)
 
+
+# list1=[1, 2, 3]
+# copy_list=list1.copy()
+# print(copy_list)
 
 
 # 19. Print All Prime Numbers in List
@@ -288,8 +307,6 @@
 # else:
 #     print("invalid input")
     
-
-
 
 # 20. Replace All Zeroes with a Given Number
 # Problem: Replace every zero with a specific value (e.g., -1). Input: [0, 2, 0, 4], replace with -1 Output: [-1, 2, -1, 4]
@@ -341,16 +358,37 @@
 # Problem: Find all pairs in the list whose sum equals a given value. Input: [1, 2, 3, 4], sum = 5 Output: [(1, 4), (2, 3)]
 
 
+
 # 26. Remove All Odd Numbers
 # Problem: Remove all odd numbers from the list. Input: [1, 2, 3, 4, 5] Output: [2, 4]
+# list=[1, 2, 3, 4, 5]
+# even_list=[]
+# for i in list:
+#     if i%2==0:
+#       even_list+=[i]
+# print(even_list)
 
 
 # 27. Remove All Even Numbers
 # Problem: Remove all even numbers from the list. Input: [1, 2, 3, 4, 5] Output: [1, 3, 5]
+# list=[1, 2, 3, 4, 5]
+# odd_list=[]
+# for i in list:
+#     if i%2!=0:
+#         odd_list+=[i]
+# print(odd_list)
 
 
 # 28. Multiply All Elements by a Number
 # Problem: Multiply every element in the list by a fixed number. Input: [1, 2, 3], multiply by 2 Output: [2, 4, 6]
+
+# list=[1, 2, 3]
+# multiple_list=[]
+# num=2
+# for i in list:
+#     if list*i:
+#         multiple_list+=[i*num]
+# print(multiple_list)
 
 
 # 29. Find Difference Between Max and Min
@@ -360,44 +398,112 @@
 # 30. Check if a List is Empty
 # Problem: Write a function that returns True if the list is empty, else False. Input: [] Output: True
 
+# list=[]
+# if not list:
+#     print(True)
+# else:
+#     print(False)
+
 
 # 31. Insert Element at Specific Index
 # Problem: Insert a value at a specific position. Input: [1, 2, 4], insert 3 at index 2 Output: [1, 2, 3, 4]
+
+# list= [1, 2, 4]
+# list.insert(2,3)
+# print(list)
+
+# with out using bultin method
+# list= [1, 2, 4]
+# index=2
+# value=3
+# new_list=[]
+# for i in range(len(list)):
+#     if i==index:
+#         new_list+=[value]
+#     new_list+=[list[i]]
+# print(new_list)
 
 
 
 # 32. Remove All Instances of a Value
 # Problem: Remove all occurrences of a specific value. Input: [1, 2, 2, 3], remove 2 Output: [1, 3]
 
-
+# list=[1, 2, 2, 3]
+# duple=[]
+# for i in list:
+#     if i!=2:
+#         duple.append(i)
+# print(duple)
 
 # 33. Get Index of an Element
 # Problem: Return the index of a given value. Input: [10, 20, 30], find index of 20 Output: 1
 
+# list=[10, 20, 30]
+# value=20
+# for i in range(len(list)):
+#     if list[i]==value:
+#         print(i)
 
 
 # 34. Square All Elements in a List
-# Problem: Return a list with each element squared. Input: [1, 2, 3] Output: [1, 4, 9]
+# Problem: Return a list with each element squared. Input: [1, 2, 3] Output: [1, 4, 9]\
 
+# list=[1, 2, 3]
+# sqr=[]
+# for i in list:
+#      sqr.append(i**2)
+# print(sqr)
 
 # 35. Filter Out Negative Numbers
 # Problem: Remove all negative values from the list. Input: [-1, 2, -3, 4] Output: [2, 4]
+# list= [-1, 2, -3, 4] 
+# positive=[]
+# for i in list:
+#     if i>0:
+#       positive.append(i)
+# print(positive)
 
 
 # 36. Get Elements Greater Than a Value
 # Problem: Return elements greater than a specified number. Input: [1, 5, 8, 3], greater than 4 Output: [5, 8]
 
+# list=[1, 5, 8, 3]
+# greater=[]
+# for i in range(len(list)):
+#     if list[i]>4:
+#         greater+=[list[i]]
+# print(greater)
+
 
 # 37. Find Duplicates in List
 # Problem: Return a list of duplicated values. Input: [1, 2, 2, 3, 3, 4] Output: [2, 3]
+
+# list=[1, 2, 2, 3, 3, 4]
+# duple=[]
+# for i in range(len(list)):
+#     for j in range(i+1,len(list)):
+#         if list[i]==list[j]:
+#             if list[i] not in duple:
+#                 duple+=[list[i]]
+# print(duple)
 
 
 # 38. Rotate List Elements Right
 # Problem: Rotate list by k positions to the right. Input: [1, 2, 3, 4], k = 2 Output: [3, 4, 1, 2]
 
 
+
+
+
 # 39. Check If List Contains a Value
 # Problem: Return True if list contains a specific value. Input: [1, 2, 3], check 2 Output: True
+
+# list=[1, 2, 3]
+# value=2
+# if value in list:
+#     print(True)
+# else:
+#     print(False)
 
 
 # 40. Chunk List into Smaller Lists
@@ -412,7 +518,7 @@
 # list=[1,2,3,4,5,6,2,3,2,3,2]
 # li=random.randint(1,10)
 # print(list[4])
-list=[1,2,3,4]
+# list=[1,2,3,4]
 # print(list[0],list[3])
 # list.append(5)
 # print(list)
@@ -427,3 +533,23 @@ list=[1,2,3,4]
 # list.count(2)
 # list.index(3)
 # print(list)
+
+
+
+# a="1.2.3.4"
+# b=""
+# for i in a:
+#   if i==".":
+#     b+="*"
+#   else:
+#     b+=i
+# print(b)
+  
+
+
+list=[1,2,3,4,5]
+max_value=[]
+for i in list:
+    max_value+=
+   
+      
