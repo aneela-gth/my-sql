@@ -11,13 +11,26 @@
 # lt=lt+[new_element]
 # print(lt)
 
+
 # lst=[1,2,3]
 # val=4
-# new_lst=[]
+# new_lst=[]000
 # for i in lst:
 #     new_lst+=[i]
-# new_lst+=[val]
+# new_lst.append(val)
 # print(new_lst)
+
+
+# list=[1,2,3,4]
+# a=5
+# new=[]
+# for i in list:
+#     new+=[i]
+# new.append(a)
+# print(new)
+
+
+
 
 
 # --------------------------------------------------------------------------------------
@@ -37,7 +50,13 @@
 # print(new_list)
 
 
-
+# list=[1,2,3,4]
+# remove_list=3
+# new_list=[]
+# for i in list:
+#     if i!=remove_list:
+#         new_list.append(i)
+# print(new_list)
 
 
 # ------------------------------------------------------------------------------------------------
@@ -59,9 +78,6 @@
 #     if i>max_val:
 #         max_val=i
 # print(max_val)
-
-
-
 
 
 # 4. Find Minimum in List
@@ -115,6 +131,14 @@
 # print(rev)
 
 
+
+# a=[1,2,3]
+# rev=[]
+# for i in a:
+#     rev=[i]+rev
+# print(rev)
+
+
 # a=[1, 2, 3]
 # rev=[]
 # for i in range(len(a)-1,-1,-1):
@@ -136,10 +160,6 @@
 
 
 
-
-
-
-
 # 9. Remove Duplicates from a List
 # Problem: Eliminate duplicate values. Explanation: Use set() or manual loop. Input: [1, 2, 2, 3] Output: [1, 2, 3]
 # c=[1, 2, 2, 3]
@@ -153,6 +173,8 @@
 #     if not present:
 #         dupli+=[c[i]]
 # print(dupli)
+
+
 
 # 10. Merge Two Lists
 # Problem: Merge two lists into one. Explanation: Use + operator or extend(). Input: [1, 2], [3, 4] Output: [1, 2, 3, 4]
@@ -178,8 +200,6 @@
 # for i in d:
 #     merged+=[i]
 # print(merged)
-
-
 
 
 # 11. Find Common Elements in Two Lists
@@ -315,6 +335,14 @@
 # 21. Check if All Elements Are Same
 # Problem: Check whether all elements in the list are identical. Input: [5, 5, 5, 5] Output: True
 
+# list= [5, 5, 5, 5]
+# all_same=True 
+# for i in list:
+#     if i !=list[0]:
+#       all_same=False
+# print(all_same)
+   
+
 
 # 22. Find Frequency of All Elements
 # Problem: Return a dictionary with the frequency of each element. Input: [1, 2, 2, 3, 1] Output: {1: 2, 2: 2, 3: 1}
@@ -357,6 +385,15 @@
 # 25. Find Pair of Elements with Given Sum
 # Problem: Find all pairs in the list whose sum equals a given value. Input: [1, 2, 3, 4], sum = 5 Output: [(1, 4), (2, 3)]
 
+# list=[1, 2, 3, 4]
+# target_sum=5
+# pairs=[]
+# for i in range(len(list)):
+#     for j in range(i+1,len(list)):
+#         if list[i]+list[j]==target_sum:
+#             pairs.append((list[i],list[j]))
+# print(pairs)
+
 
 
 # 26. Remove All Odd Numbers
@@ -394,6 +431,10 @@
 # 29. Find Difference Between Max and Min
 # Problem: Return the difference between the largest and smallest element. Input: [4, 2, 7, 1] Output: 6
 
+# list=[4, 2, 7, 1]
+# maximum=max(list)
+# minimum=min(list)
+# print("diffrence:",maximum-minimum)
 
 # 30. Check if a List is Empty
 # Problem: Write a function that returns True if the list is empty, else False. Input: [] Output: True
@@ -495,6 +536,7 @@
 
 
 
+
 # 39. Check If List Contains a Value
 # Problem: Return True if list contains a specific value. Input: [1, 2, 3], check 2 Output: True
 
@@ -547,9 +589,22 @@
   
 
 
-list=[1,2,3,4,5]
-max_value=[]
-for i in list:
-    max_value+=
+# list=[1,2,3,4,5]
+# max_value=list[0]
+# for i in list:
+#     if i>max_value:
+#         max_value=i
+# print(max_value)
+
+# list=[1,5,3,10]
+# miximum=max(list)
+# minumm=min(list)
+# print("diffrence:",miximum-minumm)
    
       
+
+# a=[1,2,3,4]
+# count=0
+# for i in a:
+#     count+=i
+# print(count)

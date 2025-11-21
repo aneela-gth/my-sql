@@ -164,14 +164,11 @@
 # print(zeros_list)
 
 # Swap two elements in a list.
-a=[1,2,3]
-b=[4,5,6]
-a,b=b,a
-print(a)
-print(b)
-
-
-
+# a=[1,2,3]
+# b=[4,5,6]
+# a,b=b,a
+# print(a)
+# print(b)
 
 # Get last element of a list.
 # Convert a string to a list of chars.

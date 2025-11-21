@@ -42,7 +42,7 @@
 // const words = ["apple", "cat", "banana", "dog", "elephant", "pen"];
 // console.log(filterByLength(words, 3, 6));
 
-// Parameterized Calculator Function
-function calculate(a,b,operation){
-    switch 
-}
+// // Parameterized Calculator Function
+// function calculate(a,b,operation){
+//     switch 
+// }
