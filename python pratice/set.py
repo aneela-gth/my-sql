@@ -191,55 +191,92 @@
 
 
 
-
-
-
-
-
-
-
 # ________________________________________
 # 12. Update Dictionary Value
 # Problem: Change value for a specific key.
 # Explanation: Use assignment dict[key] = value.
 # Input: {"a": 1}, update a to 2
 # Output: {"a": 2}
+
+# dict={"a": 1}
+# dict["a"]=2
+# print(dict)
+
+
 # ________________________________________
 # 13. Remove Key from Dictionary
 # Problem: Delete a key-value pair.
 # Explanation: Use del or pop() method.
 # Input: {"a": 1, "b": 2}, remove b
 # Output: {"a": 1}
+
+# d={"a": 1, "b": 2}
+# del d["b"]
+# print(d)
+
 # ________________________________________
 # 14. Check Key Existence
 # Problem: Verify if a key exists.
 # Explanation: Use in operator.
 # Input: {"x": 1}, key = "x"
 # Output: True
+
+# d1={"x": 1}
+# if 'x' in d1: 
+#    print(True)
+
+# d1={"x":1}
+# if d1.get("x")is not None:
+#     print(True)
+
 # ________________________________________
 # 15. Iterate Over Dictionary
 # Problem: Print all keys and values.
 # Explanation: Use .items() in loop.
 # Input: {"a": 10, "b": 20}
 # Output: a 10, b 20
+
+# s={"a": 10, "b": 20}
+# for key,value in s.items():
+#  print(key,value)
+
 # ________________________________________
 # 16. Dictionary Length
 # Problem: Count total key-value pairs.
 # Explanation: Use len() function.
 # Input: {"x": 1, "y": 2}
 # Output: 2
+
+# d={"x": 1, "y": 2}
+# print(len(d))
+
 # ________________________________________
 # 17. Merge Two Dictionaries
 # Problem: Combine two dictionaries.
 # Explanation: Use unpacking or update().
 # Input: {"a": 1}, {"b": 2}
 # Output: {"a": 1, "b": 2}
+
+# d1={"a": 1}
+# d2={"b": 2}
+# s={}
+# s=d1.copy()
+# s.update(d2)
+# print(s)
+
+# d1={"a": 1}
+# d2={"b": 2}
+# s={**d1,**d2}
+# print(s)
+
 # ________________________________________
 # 18. Get Value with Default
 # Problem: Get value or default if key not found.
 # Explanation: Use get() method.
 # Input: {"a": 1}, get "b" with default 0
 # Output: 0
+
+
 # ________________________________________
 # 19. Count Frequency of Elements
 # Problem: Count frequency using dictionary.
@@ -285,18 +322,45 @@
 # Problem: Remove duplicate values keeping first key only.
 # Input: {"a": 1, "b": 2, "c": 1}
 # Output: {"a": 1, "b": 2}
+
+
+# d={"a": 1, "b": 2, "c": 1}
+# seen_values=[]
+# result={}
+# for key ,value in d.items():
+#     if value not in seen_values:
+#         result[key]=value
+#         seen_values.append(value)
+# print(result)
+
 # ________________________________________
 # 28. Find Common Keys in Two Dictionaries
 # Problem: Return keys common to both dictionaries.
 # Input: {"a": 1, "b": 2}, {"b": 3, "c": 4}
 # Output: ["b"]
+
+# d1={"a": 1, "b": 2}
+# d2={"b": 3, "c": 4}
+# common_key=list(d1.keys()&d2.keys())
+# print(common_key)
+
 # ________________________________________
 # 29. Swap Keys and Values Safely
 # Problem: Flip keys and values ensuring all values are unique.
 # Input: {"x": 1, "y": 2}
 # Output: {1: "x", 2: "y"}
+
+# d={"x": 1, "y": 2}
+# swapped={value:key for key,value in d.items()}
+# print(swapped)
+
 # ____________________________________________________
 # 30. Delete Items by Value
 # Problem: Remove key-value pairs with specific value.
 # Input: {"a": 1, "b": 2, "c": 1}, value: 1
 # Output: {"b": 2}
+
+# d={"a": 1, "b": 2, "c": 1}
+# value_to_remove=1
+# filtered_dict={k:v for k,v in d.items() if v!=value_to_remove}
+# print(filtered_dict)

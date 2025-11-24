@@ -228,20 +228,20 @@
 
 
 
-n=1
-m=10
-c_count=0
-p_count=0
-for i in range(n,m+1):
-        count=0
-    # if i>1:
-        for j in range(1,i+1):
-            if i%j==0:
-              count+=1
-        if count==2:
-              print("prime:",i)
-        elif count>2:
-              print("composite :",i)
+# n=1
+# m=10
+# c_count=0
+# p_count=0
+# for i in range(n,m+1):
+#         count=0
+#     # if i>1:
+#         for j in range(1,i+1):
+#             if i%j==0:
+#               count+=1
+#         if count==2:
+#               print("prime:",i)
+#         elif count>2:
+#               print("composite :",i)
               
    
 
@@ -358,3 +358,5 @@ for i in range(n,m+1):
 #     else:
 #         break
 #     print(first_vowle)
+
+# print(ord('z')-ord('e'))

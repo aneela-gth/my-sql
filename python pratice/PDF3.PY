@@ -181,6 +181,15 @@
 #         sum+=1
 # print(sum)
 
+
+# num=123
+# sum=0
+# while num>0:
+#     rem=num%10
+#     sum=sum+rem
+#     num=num//10
+# print(sum)
+
 # num=126
 # sum=0
 # while num!=0:
@@ -193,15 +202,15 @@
 # rev=0
 # while num!=0:
 #     rem=num%10
-#     rev=rev*10+rev
+#     rev=rev*10+rem
 #     num=num//10
-# print(num)
+# print(rev)
 
 # 18. Product of Digits
 # Question: Calculate the product of digits. Explanation: Multiply digits extracted from number. - Input: 123 - Output: 6
 # num=123
 # sum=1
-# while num!=0:
+# while num!=0
 #     rem=num%10
 #     sum=sum*rem
 #     num=num//10
@@ -367,28 +376,27 @@
 # temp=num
 # sqr=temp*temp
 # sum=0
-# while temp!=0:
-#     sum=0
+# while sqr!=0:
 #     rem=sqr%10
 #     sum=sum+rem
-#     temp=temp//10
-# if(temp==num):
+#     sqr=sqr//10
+# if(sum==num):
 #     print(f"{num} is neonnumber")
 # else:
 #     print(f"{num}is not a neonnumber")
 
 # 27. Strong Number Check
 # Question: Check if a number is a strong number. Explanation: Sum of factorial of digits equals the number. - Input: 145 - Output: Strong number
-# num=145
+# num=145    6                              
 # temp=num
-# fast_sum=0
+# fact_sum=0
 # while temp!=0:
 #     rem=temp%10
 #     fact=1
 #     for i in range(2,rem+1):
 #         fact *= i
-#         fact_sum += fact
-#         temp=temp//10
+#     fact_sum += fact
+#     temp=temp//10
 # if fact_sum==num:
 #     print("stronge number")
 # else:
