@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BOM Example</title>
+</head>
+<body>
+
+<h2>BOM (Browser Object Model) Demo</h2>
+
+<button onclick="showWindowInfo()">Window Info</button>
+<button onclick="redirectPage()">Redirect Page</button>
+<button onclick="checkBrowser()">Check Browser</button>
+<button onclick="goBack()">Go Back</button>
+<button onclick="askName()">Ask Name</button>
+
+<script>
+    // 1. Window object
+    function showWindowInfo() {
+        alert("Window Width: " + window.innerWidth +
+              "\nWindow Height: " + window.innerHeight);
+    }
+
+    // 2. Location object
+    function redirectPage() {
+        location.href = "https://google.com";   // Redirect to Google
+    }
+
+    // 3. Navigator object
+    function checkBrowser() {
+        alert("Browser Name: " + navigator.appName +
+              "\nBrowser Version: " + navigator.appVersion +
+              "\nPlatform: " + navigator.platform);
+    }
+
+    // 4. History object
+    function goBack() {
+        history.back();       // Go to previous page
+    }
+
+    // // 5. Dialog boxes (alert, confirm, prompt)
+    // function askName() {
+    //     let user = prompt("Enter you);

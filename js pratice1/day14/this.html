@@ -9,13 +9,13 @@
     <p id="para"></p>
     
     <script>
-        // const person={
-        //     firstname:"aneela",
-        //     lastname:"ane",
-        //     fun_name:function(){
-        //     console.log(`this first name is:${this.firstname} and  last name is ${this.lastname}`)
-        //     }
-        // }
+       const person = {
+    firstname: "aneela",
+    lastname: "ane",
+    fun_name: function () {
+        console.log(`this first name is: ${this.firstname} and last name is ${this.lastname}`);
+    }
+};
        
         // const person1={
         //     firstname:"akhila",
@@ -24,27 +24,27 @@
         // //  person.fun_name();
         //  person1.fun_name(person1)
         
-        const emp1={
-            empid:12,
-            empname:"usha",
-            empsalary:3000,
-            empdetails:function(bonus,gift){
-                 console.log("the total salary alog with bonus is:",this.empsalary+bonus,"and the gift they got is:",gift)
-                return `the empid: ${this.empid}| empname: ${this.empname} |empsalary: ${this.empsalary}`;
+        // const emp1={
+        //     empid:12,
+        //     empname:"usha",
+        //     empsalary:3000,
+        //     empdetails:function(bonus,gift){
+        //          console.log("the total salary alog with bonus is:",this.empsalary+bonus,"and the gift they got is:",gift)
+        //         return `the empid: ${this.empid}| empname: ${this.empname} |empsalary: ${this.empsalary}`;
 
 
-            }
-        }; 
-        emp2={
-            empid:13,
-            empname:"akhi",
-            empsalary:4500,
-        }
-        emp3={
-            empid:14,
-            empname:"sunny",
-            empsalary:4000,
-        }
+        //     }
+        // }; 
+        // emp2={
+        //     empid:13,
+        //     empname:"akhi",
+        //     empsalary:4500,
+        // }
+        // emp3={
+        //     empid:14,
+        //     empname:"sunny",
+        //     empsalary:4000,
+        // }
 
         // console.log(emp1.empdetiles.call(emp2,500,"cooker"))
         // console.log(emp1.empdetiles(500,"grinder"));
@@ -58,11 +58,11 @@
 
 
         // ///////// bind() ////////////////////
-        var res = emp1.empdetails.bind(emp2, 5000, "cooker")
-        // console.log(res())
-        console.log(setTimeout(res, 2000))
-        document.getElementById('para').innerHTML=emp1.empdetiles()
-        document.getElementById('para').innerHTML=emp1.empdetiles(emp2)
+        // var res = emp1.empdetails.bind(emp2, 5000, "cooker")
+        // // console.log(res())
+        // console.log(setTimeout(res, 2000))
+        // document.getElementById('para').innerHTML=emp1.empdetiles()
+        // document.getElementById('para').innerHTML=emp1.empdetiles(emp2)
        
          
 

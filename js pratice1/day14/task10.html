@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function selectFood(callback){
+        //     setTimeout(()=>{
+        //         console.log("food selected");
+        //         callback();
+        //     },1000);
+        // }
+
+        // function prepareFood(callback){
+        //     setTimeout(()=>{
+        //         console.log("food prepared");
+        //         callback();
+        //     },1000);
+        // }
+
+        // function packFood(callback){
+        //     setTimeout(()=>{
+        //         console.log("food packed");
+        //         callback();
+        //     },1000);
+        // }
+
+        // function deliverFood(callback){
+        //     setTimeout(()=>{
+        //         console.log("food delivered");
+        //         callback();
+        //     },1000);
+        // }
+        // selectFood(() => {
+        //     prepareFood(() => {
+        //         packFood(() => {
+        //             deliverFood(() => {
+        //                 console.log("Order Completed");
+        //             });
+        //         });
+        //     });
+        // });
+
+
+
+    // function selectFood() {
+    //     return new Promise(resolve => {
+    //         setTimeout(() => {
+    //             console.log("Food selected");
+    //             resolve();
+    //         }, 1000);
+    //     });
+    // }
+    // function prepareFood() {
+    //     return new Promise(resolve => {
+    //         setTimeout(() => {
+    //             console.log("Food prepared");
+    //             resolve();
+    //         }, 1000);
+    //     });
+    // }
+
+    // function packFood() {
+    //     return new Promise(resolve => {
+    //         setTimeout(() => {
+    //             console.log("Food packed");
+    //             resolve();
+    //         }, 1000);
+    //     });
+    // }
+
+    // function deliverFood() {
+    //     return new Promise(resolve => {
+    //         setTimeout(() => {
+    //             console.log("Food delivered");
+    //             resolve();
+    //         }, 1000);
+    //     });
+    // }
+    // selectFood()
+    //     .then(prepareFood)
+    //     .then(packFood)
+    //     .then(deliverFood)
+    //     .then(() => {
+    //         console.log("Order Completed");
+    //     });
+
+
+    
+    function selectFood() {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                console.log("Food selected");
+                resolve();
+            }, 1000);
+        });
+    }
+    function prepareFood() {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                console.log("Food prepared");
+                resolve();
+            }, 1000);
+        });
+    }
+
+    function packFood() {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                console.log("Food packed");
+                resolve();
+            }, 1000);
+        });
+    }
+    function deliverFood() {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                console.log("Food delivered");
+                resolve();
+            }, 1000);
+        });
+    }
+    async function processOrder() {
+        await selectFood();
+        await prepareFood();
+        await packFood();
+        await deliverFood();
+        console.log("Order Completed");
+    }
+    processOrder();
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

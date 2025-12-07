@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form Validation</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            font-family: Poppins, sans-serif;
+        }
+
+        .form-box {
+            width: 370px;
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        label {
+            font-size: 15px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+            transition: 0.3s;
+            outline: none;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #6e8efb;
+            box-shadow: 0px 0px 8px rgba(110,142,251,0.5);
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background: #6e8efb;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #5c7cfb;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body onload="buttoncolor()">
+
+    <div class="form-box">
+        <h2>Login</h2>
+
+        <form name="myform" onsubmit="return formvalidation()">
+
+            <label>Username</label>
+            <input type="text" name="name">
+
+            <label>Password</label>
+            <input type="password" name="password">
+
+            <label>Re-enter Password</label>
+            <input type="password" name="password2">
+
+            <input type="submit" name="btn" value="Login">
+        </form>
+    </div>
+
+    <script>
+        function formvalidation() {
+            var name = document.myform.name.value;
+            var pass1 = document.myform.password.value;
+            var pass2 = document.myform.password2.value;
+
+            if (anme=null || name === "") {
+                alert("Username is mandatory");
+                return false;
+            }
+            if (pass1.length < 6 || pass2.length < 6) {
+                alert("Password must be at least 6 characters");
+                return false;
+            }
+            if (pass1 == pass2) {
+                alert("Passwords do not match");
+                return false;
+            }
+
+            alert("Login Successful!");
+            return true;
+        }
+
+        function buttoncolor() {
+            let btn = document.getElementsByName("btn")[0];
+            btn.style.backgroundColor = "#6e8efb";
+        }
+    </script>
+
+</body>
+</html>

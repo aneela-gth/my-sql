@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validations</title>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            width: 350px;
+            box-shadow: 0px 4px 20px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 18px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #4a6cf7;
+            box-shadow: 0px 0px 6px rgba(74,108,247,0.4);
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background: #4a6cf7;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #2f4cd8;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body onload="buttoncolor()">
+
+    <form name="myform" onsubmit="return Formvalidation()">
+        Name: <input type="text" name="username"><br><br>
+        Password: <input type="password" name="password"><br><br>
+        <input type="submit" value="Login" name="btn">
+    </form>
+
+    <script>
+        function Formvalidation() {
+            var name = document.myform.username.value;
+            var password = document.myform.password.value;
+
+            if (name == null || name === "") {
+                alert("Username is mandatory");
+                return false;
+            }
+            else if (password == null || password === "") {
+                alert("Password is mandatory");
+                return false;   
+            }
+            else {
+                alert("Logged in successfully");
+                return true;
+            }
+        }
+
+        function buttoncolor() {
+            var btn1 = document.getElementsByName('btn');
+            btn1[0].style.color = 'blue';
+        }
+    </script>
+
+</body>
+</html>
