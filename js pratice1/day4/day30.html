@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // get method:
+        // fetch("https://fakestoreapi.com/products")
+        // .then(res=>res.json())
+        // .then(data=>console.log(data))
+        // .catch(err=>console.log('Error:',err))
+
+
+
+        // post method:
+        // fetch("https://fakestoreapi.com/products",{
+        //     method:"POST",
+        //     headers:{
+        //         "content-type":"application/json"
+        //     },
+        //     body:JSON.stringify({
+
+        //         name:"sundri",
+        //         email:"sundri@gmail.com"
+        //     })
+        // })
+        // .then(res=>res.json())
+        // .then(data=>console.log(data))
+        // .catch(err=>console.log("Error ocurreding fetching the data,error"))
+
+
+       // PUT:
+// PUT:
+    fetch("https://fakestoreapi.com/products/1", {
+        method: 'PUT',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            name: "jhon",
+            email: "jhon@gmail.com",
+            username: "johny johny.789",
+            phone: "7689546329"
+        })
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.log("Error:", err));
+
+        
+
+
+    </script>
+</body>
+</html>
