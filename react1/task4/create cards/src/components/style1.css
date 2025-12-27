@@ -1,0 +1,77 @@
+/* ================= MAIN CONTAINER ================= */
+.main1 {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ================= ICE CREAM CARD ================= */
+.ice1 {
+    border: 2px solid black;
+    width: 280px;
+    height: auto;
+    padding: 25px;
+    background-color: rgb(163, 159, 162);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.ice1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+/* ================= IMAGE ================= */
+.ice1 img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+
+/* ================= TEXT ================= */
+.ice1 h2 {
+    color: rgb(56, 42, 165);
+    text-align: center;
+    margin-top: 15px;
+}
+
+.ice1 h3 {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* ================= BUTTON ================= */
+.btn1 {
+    display: block;
+    margin: 20px auto;
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.btn1:hover {
+    background-color: burlywood;
+    transform: scale(1.1);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .ice1 {
+        width: 80%;
+        height: auto;
+    }
+}

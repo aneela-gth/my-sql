@@ -1,0 +1,29 @@
+{
+    "students":[
+        {
+            "id":1,
+            "name":"aneela",
+            "email":"aneela@gmail.com",
+            "age":22
+        },
+         {
+            "id":2,
+            "name":"suppu",
+            "email":"suppu@gmail.com",
+            "age":21
+        },
+         {
+            "id":3,
+            "name":"sreevani",
+            "email":"sreevani@gmail.com",
+            "age":20
+        },
+         {
+            "id":4,
+            "name":"sharnya",
+            "email":"charanaya@gmail.com",
+            "age":23
+        }
+
+    ]
+}

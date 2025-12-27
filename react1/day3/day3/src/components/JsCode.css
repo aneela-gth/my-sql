@@ -1,0 +1,17 @@
+.header1{
+    text-align: center;
+    background-color: rgb(34, 33, 32);
+    color: aliceblue;
+    padding: 10px;
+    margin: 20px;
+
+
+}
+.para1{
+    text-align:center;
+    background-color: chocolate;
+    padding: 10px;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+}

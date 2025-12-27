@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMDb Style Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <span class="logo">IMDb</span>
+            <button a href="imdb.html">☰ Menu</button>
+        </div>
+
+        <div class="search-box">
+            <select>
+                <option>All</option>
+            </select>
+            <input type="text" placeholder="Search IMDb">
+        </div>
+
+        <div class="nav-right">
+            <a href="imdb.html">IMDbPro</a>
+            <a href="watchlist.html">Watchlist</a>
+            <a href="sign.html">Sign In</a>
+        </div>
+    </nav>
+
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section">
+
+        <!-- LEFT: MAIN HERO IMAGE / VIDEO -->
+        <div class="hero-left">
+
+            <!-- Arrow buttons for image slider -->
+            <button class="arrow left">❮</button>
+            <button class="arrow right">❯</button>
+
+            <!-- This image changes by your JS code -->
+            <img src="images copy/image1.webp" alt="" class="hero-img">
+
+            <!-- Overlay content -->
+            <div class="hero-overlay">
+                
+                <div class="imdb-originals">
+                    <!-- <span>IMDb ORIGINALS</span> -->
+                    <!-- <p>MOST POPULAR INDIAN DIRECTORS OF 2025</p> -->
+                </div>
+
+                <div class="hero-text">
+                    <button class="play-btn">▶</button>
+                    <div>
+                        <h3>Most Popular Indian Directors of 2025</h3>
+                        <p class="watch-now">Watch Now</p>
+                        <p class="likes">👍 108 ❤️ 31</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- ================= RIGHT PANEL (UP NEXT) ================= -->
+        <aside class="up-next">
+            <h2 class="up-title">Up next</h2>
+
+            <div class="up-item">
+                <img src="images copy/image14.jpg" alt="">
+                <div class="up-info">
+                    <p class="play-time">2:20</p>
+                    <h4>"A Knight of the Seven Kingdoms"</h4>
+                    <p>Watch the New Trailer</p>
+                    <div class="reactions">👍 652 😊 265</div>
+                </div>
+            </div>
+
+            <div class="up-item">
+                <img src="images copy/image19.jpg" alt="">
+                <div class="up-info">
+                    <p class="play-time">2:19</p>
+                    <h4>'Ready or Not 2: Here I Come'</h4>
+                    <p>Watch the Trailer</p>
+                    <div class="reactions">👍 465 😍 211</div>
+                </div>
+            </div>
+
+            <div class="up-item">
+                <img src="images copy/image21.jpg" alt="">
+                <div class="up-info">
+                    <p class="play-time">6:35</p>
+                    <h4>Movie Memories with George Clooney</h4>
+                    <p>Watch Now</p>
+                    <div class="reactions">👍 106 💘 17</div>
+                </div>
+            </div>
+
+            <a class="browse-link" href="browser.html">Browse trailers ›</a>
+        </aside>
+
+    </section>
+      <section class="featured">
+    <h2>Featured today</h2>
+
+    <div class="slider-wrapper">
+      <button class="nav-btn" onclick="slideLeft()">❮</button>
+
+      <!-- Slider container (JS will add cards here) -->
+      <div class="slider" id="slider"></div>
+
+      <button class="nav-btn" onclick="slideRight()">❯</button>
+    </div>
+  </section>
+  
+  <!-- ⭐ Most Popular Celebrities Section -->
+  <section class="celeb-section">
+    <h2 class="title">Most popular celebrities ➜</h2>
+    <div class="row">
+      <p class="small-title">TOP RISING</p>
+      <p class="small-title">BY RANKING</p>
+    </div>
+
+    <div class="celeb-slider" id="slider">
+
+      <!-- Card 1 -->
+      <div class="celeb">
+        <img src="images copy/image13.webp" alt="">
+        <p class="rank">3 ( +255,862 )</p>
+        <p class="name">Nick Reiner</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="celeb">
+        <img src="images copy/image13.webp" alt="">
+        <p class="rank">34 ( +141,964 )</p>
+        <p class="name">Jake Reiner</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="celeb">
+        <img src="images copy/image13.webp" alt="">
+        <p class="rank">1 ( +1,512 )</p>
+        <p class="name">Rob Reiner</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="celeb">
+        <img src="images copy/image13.webp" alt="">
+        <p class="rank">2 (↓1)</p>
+        <p class="name">Josh O'Connor</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="celeb">
+        <img src="images copy/image13.webp" alt="">
+        <p class="rank">4 ( +62,966 )</p>
+        <p class="name">Michele Reiner</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="celeb">
+        <img src="images copy/image13.webp" alt="">
+        <p class="rank">5 ( -2 )</p>
+        <p class="name">Cailee Spaeny</p>
+      </div>
+         <!-- Card 6 -->
+      <div class="celeb">
+        <img src="images copy/image13.webp" alt="">
+        <p class="rank">5 ( -2 )</p>
+        <p class="name">Cailee Spaeny</p>
+      </div>
+         <!-- Card 6 -->
+      <div class="celeb">
+        <img src="images copy/image13.webp" alt="">
+        <p class="rank">5 ( -2 )</p>
+        <p class="name">Cailee Spaeny</p>
+      </div>
+         <!-- Card 6 -->
+      <div class="celeb">
+        <img src="images copy/image13.webp" alt="">
+        <p class="rank">5 ( -2 )</p>
+        <p class="name">Cailee Spaeny</p>
+      </div>
+         <!-- Card 6 -->
+      <div class="celeb">
+        <img src="images copy/image13.webp" alt="">
+        <p class="rank">5 ( -2 )</p>
+        <p class="name">Cailee Spaeny</p>
+      </div>
+         <!-- Card 6 -->
+      <div class="celeb">
+        <img src="images copy/image13.webp" alt="">
+        <p class="rank">5 ( -2 )</p>
+        <p class="name">Cailee Spaeny</p>
+      </div>
+
+    </div>
+
+    <button class="next-btn" id="nextBtn">❯</button>
+  </section>
+    <!-- ⭐ FAN FAVORITES SECTION -->
+  <section class="fan-section">
+    <h2 class="heading">Fan favorites ➜</h2>
+    <p>This week's top TV and movies</p>
+
+    <div class="movie-container" id="movieList">
+      <!-- MOVIE CARDS WILL BE ADDED BY JS -->
+    </div>
+  </section>
+
+
+  <!-- 🎥 MOVIE TRAILER POPUP MODAL -->
+  <div id="videoModal" class="modal">
+    <video id="trailerVideo" width="800" controls></video>
+  </div>
+
+
+  <!-- ⭐ SECOND MOVIE GRID (POPULAR INTERESTS / EXTRA LIST) -->
+  <section>
+    <h2 class="heading">Popular interests ➜</h2>
+    <div class="movie-container" id="movieContainer">
+      <!-- EXTRA MOVIES ADDED BY JS -->
+    </div>
+  </section>
+    <!-- ⭐ PAGE HEADING -->
+  <h1 class="page-heading">Fan favorites</h1>
+  <button id="backToTop" class="top-btn">⬆ Back to top</button>
+  <p class="section-sub">This week's top TV and movies</p>
+
+  <!-- ⭐ MOVIE SLIDER SECTION -->
+  <section>
+    <h2 class="section-title">In theaters ➜</h2>
+    
+    <div class="movie-slider-wrapper">
+      
+      <!-- Left Scroll Button -->
+      <button class="scroll-btn scroll-left" onclick="document.getElementById('theaterMovieBox').scrollBy({ left: -300, behavior:'smooth' });">
+        ⬅
+      </button>
+
+      <!-- Movie Cards Slider -->
+      <div class="movie-slider" id="theaterMovieBox">
+        <!-- JS will insert movie cards here -->
+      </div>
+
+      <!-- Right Scroll Button -->
+      <button class="scroll-btn scroll-right" onclick="document.getElementById('theaterMovieBox').scrollBy({ left: 300, behavior:'smooth' });">
+        ➡
+      </button>
+
+    </div>
+  </section>
+
+  <!-- ⭐ VIDEO POPUP (IF NEEDED) -->
+  <div id="videoPopup" style="display:none;"></div>
+  
+
+
+    <!-- JS FILE -->
+    <script src="script.js"></script>
+</body>
+</html>

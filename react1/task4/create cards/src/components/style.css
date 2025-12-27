@@ -1,0 +1,105 @@
+/* ================= MAIN CONTAINER ================= */
+.main {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+/* ================= CARD STYLE (DESKTOP) ================= */
+.burger {
+    width: 280px;
+    height: auto;
+    background-color: darkkhaki;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.burger:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+/* ================= IMAGE ================= */
+.burger img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+    border-radius: 15px;
+    border: 2px solid black;
+    object-fit: cover;
+}
+
+/* ================= TEXT ================= */
+.burger h2 {
+    text-align: center;
+    margin-top: 15px;
+    color: brown;
+    font-size: 18px;
+}
+
+.burger h3 {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+/* ================= BUTTON ================= */
+.btn1 {
+    display: block;
+    margin: 20px auto;
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn1:hover {
+    background-color: burlywood;
+    transform: scale(1.1);
+}
+
+/* ================= MEDIUM (TABLET) ================= */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .burger {
+        width: 280px;
+        height: 460px;
+        padding: 25px;
+    }
+
+    .burger img {
+        width: 190px;
+        height: 190px;
+    }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .burger {
+        width: 90%;
+        height: auto;
+    }
+
+    .burger img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+
+

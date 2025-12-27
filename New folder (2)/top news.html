@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMDb News Style Page</title>
+
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff}
+header{background:#000;color:#fff;display:flex;align-items:center;padding:12px 20px;gap:20px;}
+header img{height:35px}
+.menu-btn, .search-bar input{font-size:16px}
+.search-bar{flex:1}
+.search-bar input{width:100%;padding:8px;border-radius:4px;border:1px solid #ccc}
+
+.top-icons{display:flex;gap:20px;font-size:15px;align-items:center}
+.top-icons a{color:white;text-decoration:none}
+
+.container{display:flex;max-width:1200px;margin:auto;padding:20px;gap:30px;}
+.article-box{flex:3;background:white;padding:20px;border:1px solid #ddd;border-radius:6px}
+.article-box img{width:160px;border-radius:6px;float:left;margin-right:15px}
+.article-box h1{margin-top:0;font-size:26px}
+
+.sidebar{flex:1}
+.sidebar h3{border-left:4px solid gold;padding-left:10px;margin-bottom:10px}
+.news-item{display:flex;gap:10px;margin-bottom:10px;border-bottom:1px solid #eee;padding-bottom:10px}
+.news-item img{width:60px;height:60px;border-radius:4px;object-fit:cover}
+.footer{background:black;color:white;text-align:center;padding:40px 20px;margin-top:40px}
+
+/* Clear All Section */
+.recent-wrapper{background:#000;color:white;padding:20px}
+.recent-header{display:flex;justify-content:space-between;margin-bottom:15px}
+.viewed-cards{display:flex;gap:20px;overflow-x:auto}
+.viewed-card{background:#111;color:white;padding:10px;border-radius:6px;min-width:150px}
+.viewed-card img{width:100%;border-radius:6px}
+.clear-btn{color:#3fa9fc;cursor:pointer;font-weight:bold}
+</style>
+</head>
+
+<body>
+
+<!-- ⭐ HEADER -->
+<header id="topnews">
+<img src="images copy/image11.jpg">
+<span class="menu-btn">☰ Menu</span>
+<div class="search-bar"><input type="text" placeholder="Search IMDb"></div>
+<div class="top-icons">
+  <a href="#">IMDbPro</a>
+  <a href="#">Watchlist</a>
+  <a href="#">Sign in</a>
+</div>
+</header>
+
+<!-- ⭐ MAIN CONTENT -->
+<div class="container">
+  <div class="article-box">
+    <img src="images/zootopia2.jpg" alt="">
+    <h1>Disney Box Office Hits $6 Billion for First Time Since COVID Thanks to ‘Lilo & Stitch’ and ‘Zootopia 2’</h1>
+    <p>This is Disney’s fifth time crossing the $6 billion benchmark — and first since Covid...</p>
+    <p>Thanks to major releases including “Lilo & Stitch”, “Zootopia 2”, and Marvel titles...</p>
+    <p><a href="#">Read full article →</a></p>
+    <small>12/24/2025 • by Rebecca Rubin</small>
+  </div>
+
+  <!-- ⭐ SIDEBAR -->
+  <div class="sidebar">
+    <h3>More to explore</h3>
+
+    <div class="news-item">
+      <img src="images copy/image20.jpeg">
+      <div>
+        <b>Disney Box Office Hits $6 Billion...</b>
+        <div>12/24/2025</div>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <img src="images copy/image20.jpeg">
+      <div>
+        <b>Avatar: Fire and Ash Smashes Records</b>
+        <div>12/23/2025</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ⭐ RECENTLY VIEWED -->
+<div class="recent-wrapper">
+  <div class="recent-header">
+    <h2>Recently viewed</h2>
+    <span class="clear-btn">Clear all</span>
+  </div>
+
+  <div class="viewed-cards">
+    <div class="viewed-card">
+      <img src="images copy/image20.jpeg"><p>Champion</p>
+    </div>
+    <div class="viewed-card">
+      <img src="images copy/image20.jpeg"><p>Dhruhandhar</p>
+    </div>
+  </div>
+</div>
+
+<!-- ⭐ FOOTER -->
+<div class="footer">
+  © 2025 IMDb | Terms • Privacy • Cookies
+</div>
+
+
+<!-- ⭐ JAVASCRIPT -->
+<script>
+// CLEAR ALL ACTION
+const viewed = document.querySelector(".viewed-cards");
+const clearAll = document.querySelector(".clear-btn");
+
+clearAll.addEventListener("click", ()=>{
+  viewed.innerHTML = "";
+  clearAll.textContent = "Cleared ✔";
+});
+</script>
+
+</body>
+</html>

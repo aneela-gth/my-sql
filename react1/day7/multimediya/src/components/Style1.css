@@ -1,0 +1,68 @@
+General page styling
+body {
+  font-family: Arial, sans-serif;
+  background-color: #a6a778;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container for all cards */
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* space between cards */
+  padding: 20px;
+}
+
+/* Individual card styling */
+.burger {
+  background-color: rgb(183, 150, 207);
+  border: 2px solid #7b1d97;
+  border-radius: 10px;
+  padding: 15px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for cards */
+.burger:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Card images */
+.burger img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Headings */
+.burger h2 {
+  margin: 10px 0 5px 0;
+  font-size: 18px;
+}
+
+.burger h3 {
+  margin: 5px 0 10px 0;
+  color: #555;
+  font-size: 16px;
+}
+
+/* Video styling */
+.burger video {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Audio styling */
+.burger audio {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+

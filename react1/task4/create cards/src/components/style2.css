@@ -1,0 +1,74 @@
+.main2{
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Card */
+.ice2{
+    border: 2px solid #333;
+    width: 280px;
+    height: auto;
+    padding: 25px;
+    background: linear-gradient(135deg, rgb(193,178,102), rgb(230,215,140));
+    margin-left: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ice2:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 30px rgba(0,0,0,0.3);
+}
+
+/* Image */
+.pce1 img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #000;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Headings */
+.ice2 h2{
+    color: rgb(210, 87, 20);
+    margin: 10px 0;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.ice2 h3{
+    margin: 10px 0 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Button */
+.btn1{
+    width: 120px;
+    height: 45px;
+    border-radius: 30px;
+    border: none;
+    background-color: chocolate;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn1:hover{
+    background-color: burlywood;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Button active effect */
+.btn1:active{
+    transform: scale(0.95);
+}

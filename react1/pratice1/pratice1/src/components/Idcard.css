@@ -1,0 +1,54 @@
+
+.card {
+  width: 320px;
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial;
+  background: #fff;
+  background-color:rgb(203, 197, 134);
+}
+
+.college {
+  color: rgb(99, 14, 71);
+  font-size: 16px;
+  margin: 0;
+  background-color: rgb(179, 148, 126);
+}
+
+.sub {
+  color: blue;
+  font-size: 13px;
+  margin: 2px 0;
+  background-color: rgb(170, 136, 111);
+}
+
+.place {
+  font-size: 12px;
+}
+
+.title {
+  color: rgb(22, 22, 21);
+  margin: 10px 0;
+}
+
+.photo {
+  width: 120px;
+  height: 150px;
+  border: 2px solid rgb(10, 10, 10);
+  object-fit: cover;
+  margin: 10px 0;
+}
+
+.details {
+  text-align: left;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.sign {
+  text-align: right;
+  margin-top: 20px;
+  font-weight: bold;
+}

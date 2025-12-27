@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celebrity news - IMDb Style</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+    }
+
+    /* TOP NAVBAR */
+    .nav {
+      background: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      justify-content: space-between;
+    }
+    .nav-left, .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .logo {
+      background: #f5c518;
+      color: black;
+      padding: 6px 12px;
+      font-weight: 700;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .search-box {
+      padding: 8px;
+      width: 250px;
+      border-radius: 4px;
+      border: none;
+    }
+
+    /* PAGE LAYOUT */
+    .page-container {
+      display: flex;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    /* LEFT SIDE MAIN ARTICLE */
+    .main-article {
+      width: 65%;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+    .main-article h2 {
+      border-left: 4px solid #f5c518;
+      padding-left: 10px;
+    }
+    .main-img {
+      width: 100%;
+      border-radius: 8px;
+      margin: 15px 0;
+    }
+
+    /* RIGHT SIDE TOP NEWS CARD LIST */
+    .sidebar {
+      width: 30%;
+    }
+    .sidebar h3 {
+      border-left: 4px solid #f5c518;
+      padding-left: 10px;
+    }
+    .news-card {
+      display: flex;
+      gap: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .news-card img {
+      width: 70px;
+      height: 70px;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+    body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#ffffff;
+}
+
+
+
+/* PAGE LAYOUT */
+.page-container{
+  max-width:1300px;
+  margin:auto;
+  display:flex;
+  gap:20px;
+  padding:20px;
+}
+
+/* LEFT NEWS LIST */
+.left-news{
+  width:65%;
+}
+.news-item{
+  display:flex;
+  gap:15px;
+  border:1px solid #ddd;
+  padding:15px;
+  border-radius:10px;
+  margin-bottom:20px;
+}
+.news-item img{
+  width:180px;
+  height:120px;
+  border-radius:8px;
+  object-fit:cover;
+}
+.news-item h3{
+  margin:0;
+}
+.news-item p{
+  font-size:14px;
+  margin:5px 0;
+}
+.news-item small{
+  color:#555;
+}
+
+/* RIGHT SIDEBAR */
+.sidebar{
+  width:30%;
+}
+.sidebar h3{
+  padding-left:8px;
+  border-left:4px solid #f5c518;
+}
+.tv-card{
+  display:flex;
+  gap:10px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  padding:8px;
+  margin-bottom:10px;
+  cursor:pointer;
+}
+.tv-card img{
+  width:65px;
+  height:65px;
+  border-radius:6px;
+  object-fit:cover;
+}
+.viewed-cards-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.viewed-cards {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px 20px;
+}
+
+.viewed-card {
+  background: #111;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  min-width: 150px;
+  text-align: center;
+}
+
+.viewed-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 5px;
+}
+
+.clear-btn {
+  color: #3fa9fc;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* -------------------- FOOTER -------------------- */
+.footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  border-top: 1px solid #0b0b0b;
+  font-size: 14px;
+  color: #555;
+}
+.footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  border-top: 1px solid #0b0b0b;
+  font-size: 14px;
+  color: #555;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #f5c518; /* optional: highlight on hover */
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- 🔝 NAVBAR -->
+  <header class="nav">
+    <div class="nav-left">
+      <div class="logo">IMDb</div>
+     <a href="imdb.html" class="menu-btn">☰ Menu</a>
+      <span>All ▼</span>
+      <input type="text" class="search-box" placeholder="Search...">
+    </div>
+    <div class="nav-right">
+      <span>IMDbPro</span>
+      <span ><a href="watchlist.html">Watchlist</a></span>
+      <span> <a href="sign.html">Sign In</a></span>
+      <span>🌐 EN ▼</span>
+    </div>
+  </header>
+
+  <!-- 📰 PAGE BODY -->
+  <div class="page-container">
+
+    <!-- LEFT SIDE MAIN CONTENT -->
+    <div class="main-article">
+      <h2>Celebrity news</h2>
+
+      <h3>Pat Finn Dies: ‘The Middle’, ‘Seinfeld’ Actor Was 60</h3>
+      <img src="celebrity.jpg" class="main-img" alt="Celebrity photo">
+
+      <p>
+        Pat Finn, a prolific TV character actor and comedian died Monday,
+        December 22, following a battle with cancer. He was best known for his
+        role on ABC’s <b>The Middle</b> and appearances on <b>Seinfeld</b>.
+      </p>
+
+      <p>
+        His death was announced by the family. Finn worked on several major productions
+        and played iconic roles throughout his career in Hollywood.
+      </p>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="sidebar">
+      <h3>More to explore</h3>
+      <h4>Top news ➜</h4>
+
+      <div class="news-card">
+        <img src="news1.jpg">
+        <div>
+          Disney Box Office Hits $6 Billion For First Time Since COVID
+          <br><small>12/24/2025</small>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <img src="news2.jpg">
+        <div>
+          Pat Finn Dies: ‘The Middle’ Actor Was 60
+          <br><small>12/24/2025</small>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <img src="news3.jpg">
+        <div>
+          Ranveer Singh’s ‘Dhuranhar 2’ Locks 2026 Release Date
+          <br><small>12/24/2025</small>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+<!-- MAIN PAGE -->
+<div class="page-container">
+
+  <!-- LEFT SIDE MAIN NEWS FEED -->
+  <div class="left-news">
+
+    <div class="news-item">
+      <img src="news-tv1.jpg">
+      <div>
+        <h3>Apple's New Thriller Series 'Imperfect Women' Gets a First Look Photo</h3>
+        <p>Apple TV+ has a new psychological thriller debuting in 2026 featuring 3 leading actresses...</p>
+        <small>12/26/2025  ·  by Just Jared</small>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <img src="news-tv2.jpg">
+      <div>
+        <h3>The Richest 'Storage Wars' Stars, Ranked by Net Worth</h3>
+        <p>Here are the highest earning stars from the hit reality show Storage Wars...</p>
+        <small>12/26/2025  ·  by Just Jared</small>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <img src="news-tv3.jpg">
+      <div>
+        <h3>'Stranger Things 5' Finale Release Date & Schedule Announced</h3>
+        <p>Netflix officially confirms schedule details for the final chapter of Stranger Things...</p>
+        <small>12/26/2025  ·  by Variety</small>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDEBAR TV NEWS -->
+  <div class="sidebar">
+    <h3>TV news ➜</h3>
+
+    <div class="tv-card">
+      <img src="tv1.jpg">
+      <span>Hyun Bin Crime Thriller Sets Disney+ Release</span>
+    </div>
+
+    <div class="tv-card">
+      <img src="tv2.jpg">
+      <span>Bowen Yang ‘SNL’ Exit Is Most-Watched Episode in a Year</span>
+    </div>
+
+    <div class="tv-card">
+      <img src="tv3.jpg">
+      <span>Stranger Things 5 Spoiler Interview Talks Final Season</span>
+    </div>
+
+    <div class="tv-card">
+      <img src="tv4.jpg">
+      <span>Stranger Things 5 Finale Schedule Confirmed</span>
+    </div>
+
+  </div>
+
+</div>
+ 
+<div>
+    <div class="viewed-cards-header">
+  <h3>Recently Viewed</h3>
+  <span class="clear-btn">Clear All</span>
+</div>
+<div class="viewed-cards">
+  <div class="viewed-card">
+    <img src="images copy/image20.jpeg"><p>Champion</p>
+  </div>
+  <div class="viewed-card">
+    <img src="images copy/image20.jpeg"><p>Dhruhandhar</p>
+  </div>
+</div>
+
+</div>
+
+<!-- ⭐ FOOTER -->
+<div class="footer">
+  © 2025 IMDb | Terms • Privacy • Cookies
+</div>
+<script>
+  const viewed = document.querySelector(".viewed-cards");
+const clearAll = document.querySelector(".clear-btn");
+
+clearAll.addEventListener("click", () => {
+  viewed.innerHTML = "";
+  clearAll.textContent = "Cleared ✔";
+  setTimeout(() => clearAll.textContent = "Clear All", 3000);
+});
+
+</script>
+
+</body>
+</html>

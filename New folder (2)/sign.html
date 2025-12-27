@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IMDb Sign In</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#fff;
+  color:#000;
+}
+
+/* NAVBAR */
+.navbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 20px;
+  background:#111;
+  color:#fff;
+}
+
+.logo{
+  background:#f5c518;
+  color:#000;
+  font-weight:bold;
+  padding:6px 12px;
+  border-radius:4px;
+}
+
+.nav-left{
+  display:flex;
+  gap:15px;
+  align-items:center;
+}
+
+.search-box{
+  display:flex;
+  width:40%;
+  background:#fff;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.search-box select,
+.search-box input{
+  border:none;
+  padding:6px;
+}
+
+.nav-right span{
+  margin-left:15px;
+  font-size:14px;
+}
+
+.active{
+  font-weight:bold;
+}
+
+/* SIGN IN */
+.signin-container{
+  display:flex;
+  gap:60px;
+  padding:60px;
+  justify-content:center;
+}
+
+.signin-box{
+  width:340px;
+}
+
+.signin-box h2{
+  margin-bottom:20px;
+}
+
+.btn-yellow{
+  width:100%;
+  background:#f5c518;
+  border:none;
+  padding:14px;
+  font-weight:bold;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+.btn-gray{
+  width:100%;
+  background:#e6e6e6;
+  border:none;
+  padding:14px;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+.or{
+  text-align:center;
+  margin:20px 0;
+  color:#666;
+}
+
+.terms{
+  font-size:12px;
+  margin-top:20px;
+}
+
+.terms a{
+  color:#0066c0;
+  text-decoration:none;
+}
+
+/* INFO */
+.info-box{
+  width:420px;
+}
+
+.info-box h3{
+  margin-bottom:20px;
+}
+
+.info-box ul{
+  list-style:none;
+}
+
+.info-box li{
+  margin-bottom:15px;
+  font-size:14px;
+}
+
+/* ================= MODAL ================= */
+.modal{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
+  justify-content:center;
+  align-items:center;
+}
+
+.modal-content{
+  background:#fff;
+  padding:30px;
+  width:350px;
+  border-radius:8px;
+}
+
+.modal-content h3{
+  margin-bottom:15px;
+}
+
+.modal-content input{
+  width:100%;
+  padding:10px;
+  margin-bottom:12px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+.close-btn{
+  text-align:right;
+  cursor:pointer;
+  font-size:14px;
+  color:#0066c0;
+  margin-bottom:10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-left">
+    <div class="logo">IMDb</div>
+    <span>☰ Menu</span>
+  </div>
+
+  <div class="search-box">
+    <select>
+      <option>All</option>
+      <option>Movies</option>
+      <option>TV Shows</option>
+    </select>
+    <input type="text" placeholder="Search IMDb">
+  </div>
+
+  <div class="nav-right">
+    <span>IMDbPro</span>
+    <span>Watchlist</span>
+    <span class="active">Sign in</span>
+    <span>EN</span>
+  </div>
+</header>
+
+<!-- SIGN IN SECTION -->
+<section class="signin-container">
+
+  <div class="signin-box">
+    <h2>Sign in</h2>
+
+    <button class="btn-yellow" onclick="openModal()">Create an account</button>
+
+    <p class="or">or</p>
+
+    <button class="btn-gray" onclick="signIn()">Sign in to an existing account</button>
+
+    <p class="terms">
+      By signing in, you agree to IMDb's
+      <a href="#">Conditions of Use</a> and
+      <a href="#">Privacy Notice</a>.
+    </p>
+  </div>
+
+  <div class="info-box">
+    <h3>It's so much better when you sign in</h3>
+    <ul>
+      <li><b>Personalized recommendations</b><br>Titles tailored to your taste.</li>
+      <li><b>Your Watchlist</b><br>Track your future views.</li>
+      <li><b>Your ratings</b><br>Rate and remember what you watch.</li>
+      <li><b>Contribute to IMDb</b><br>Add data that helps fans.</li>
+      <li><b>Preferred services</b><br>Edit your streaming services.</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- CREATE ACCOUNT MODAL -->
+<div class="modal" id="createModal">
+  <div class="modal-content">
+    <div class="close-btn" onclick="closeModal()">✖ Close</div>
+    <h3>Create Account</h3>
+
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+
+    <button class="btn-yellow" onclick="createAccount()">Create Account</button>
+  </div>
+</div>
+
+<script>
+/* Open modal */
+function openModal(){
+  document.getElementById("createModal").style.display = "flex";
+}
+
+/* Close modal */
+function closeModal(){
+  document.getElementById("createModal").style.display = "none";
+}
+
+/* Create account demo */
+function createAccount(){
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  if(name === "" || email === "" || password === ""){
+    alert("Please fill all fields");
+    return;
+  }
+
+  alert("Account created successfully 🎉 (Demo only)");
+  closeModal();
+}
+
+/* Sign in demo */
+function signIn(){
+  alert("Redirect to sign in page (Demo)");
+}
+</script>
+
+</body>
+</html>
+
