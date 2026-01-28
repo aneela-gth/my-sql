@@ -1,0 +1,63 @@
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #d74bdc, #764ba2,#9b73d6);
+  min-height: 100vh;
+  margin: 0;
+}
+
+.app {
+  text-align: center;
+  padding-top: 40px;
+  color: rgb(231, 228, 238);
+}
+
+.roadmap {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgb(229, 154, 234);
+  color: #333;
+  padding: 25px;
+  width: 180px;
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+button {
+  margin-top: 15px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  background: #667eea;
+  color: white;
+  cursor: pointer;
+}
+.progress-box {
+  width: 60%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.progress-bar {
+  background: #ddd;
+  height: 14px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  height: 100%;
+  transition: width 0.4s ease;
+}
