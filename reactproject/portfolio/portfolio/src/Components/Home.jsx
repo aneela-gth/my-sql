@@ -1,3 +1,5 @@
+import profileImg from "../assets/WhatsApp Image 2025-10-27 at 12.30.47_2f04ba51.jpg";
+
 const Home = () => {
   return (
     <section className="hero" id="home">
@@ -28,8 +30,10 @@ const Home = () => {
       </div>
 
       <div className="hero-right">
+        <img src={profileImg} alt="Aneela" />
+
         {/* image from public folder */}
-        <img src="/src/assets/WhatsApp Image 2025-10-27 at 12.30.47_2f04ba51.jpg" alt="Aneela" />
+        {/* <img src="/src/assets/WhatsApp Image 2025-10-27 at 12.30.47_2f04ba51.jpg" alt="Aneela" /> */}
       </div>
     </section>
   );

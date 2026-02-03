@@ -6,7 +6,7 @@ const Projects = () => {
       <div className="projects-container">
         {/* Project 1 */}
         <div className="project-card">
-          <img src="/public/Tech-Ethics-Nov-Fig-1-1024x672.jpg" alt="IoT Project" />
+          <img src="/Tech-Ethics-Nov-Fig-1-1024x672.jpg" alt="IoT Project" />
           <h3>IoT Smart Traffic Management System</h3>
           <ul>
             <li>Real-time traffic monitoring using IoT sensors</li>
@@ -18,7 +18,7 @@ const Projects = () => {
 
         {/* Project 2 */}
         <div className="project-card">
-          <img src="/public/creative-studio-website-hero-section_328186-original.webp" alt="Salon Website" />
+          <img src="/creative-studio-website-hero-section_328186-original.webp" alt="Salon Website" />
           <h3>Beauty Salon Website</h3>
           <ul>
             <li>Responsive website using HTML & CSS</li>
@@ -30,13 +30,13 @@ const Projects = () => {
 
         {/* Project 3 */}
         <div className="project-card">
-          <img src="/public/wB5AAtcDLKMg3S9gru7aCWFGK6M.avif" alt="Notes App" />
+          <img src="/wB5AAtcDLKMg3S9gru7aCWFGK6M.avif" alt="Notes App" />
           <h3>Full Stack Notes App</h3>
           <ul>
             <li>Create, edit & delete notes with authentication</li>
             <li>Secure REST API with CRUD operations</li>
             <li>Smooth & responsive UI</li>
-            <li><strong>Tech:</strong> HTML, CSS, JavaScript, React</li>
+            <li><strong>Tech:</strong> HTML, CSS, JavaScript,React</li>
           </ul>
         </div>
       </div>
