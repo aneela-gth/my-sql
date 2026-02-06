@@ -35,14 +35,14 @@
 # print("1000 rupes notes:",note_1000,"note_500:",note_500,"remaining:",change)
 # 8.convert seconds into hours,minutes,and seconds
 # qustion:convert toteal second into houres,minutes,and secondes._input-total secondes=3672-output:-hours:1-minute:1-secondes:12
-totel_secondes=3672
-hours=totel_secondes//3600
-minutes=totel_secondes%3600//60
-secondes=totel_secondes%60
-print()
-print("Hours:", hours)
-print("Minutes:", minutes)
-print("Seconds:", secondes)
+# totel_secondes=3672
+# hours=totel_secondes//3600
+# minutes=totel_secondes%3600//60
+# secondes=totel_secondes%60
+# print()
+# print("Hours:", hours)
+# print("Minutes:", minutes)
+# print("Seconds:", secondes)
 
 
 # 9.sum of markes(mathes,physics,chemistry)
@@ -58,3 +58,8 @@ print("Seconds:", secondes)
 # c=88
 # average=(m+p+c)/3
 # print(average)
+
+x=[1,2,3]
+y=x
+y.append([4,5])
+print(x)
