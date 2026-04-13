@@ -1,0 +1,296 @@
+.container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+input {
+  padding: 8px;
+  margin: 5px;
+}
+
+button {
+  padding: 8px;
+  margin: 5px;
+  cursor: pointer;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #fc36fc, #764ba2);
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Form */
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d2d2cf;
+  outline: none;
+}
+
+form button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  background: #667eea;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #5a67d8;
+}
+
+/* Search + Filter */
+input[type="text"] {
+  width: 60%;
+  padding: 8px;
+  margin: 10px 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Task List */
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  background: #f4f4f4;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+li:hover {
+  transform: scale(1.02);
+  background: #651b4c;
+}
+
+/* Task text */
+li span {
+  flex: 1;
+}
+
+/* Buttons */
+li button {
+  margin-left: 8px;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Delete */
+li button:nth-child(2) {
+  background: #e53e3e;
+  color: white;
+}
+
+/* Edit */
+li button:nth-child(3) {
+  background: #38a169;
+  color: rgb(255, 255, 255);
+}
+
+/* Hover effects */
+li button:hover {
+  opacity: 0.8;
+}
+/* Background */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #8cbb1e, #764ba2);
+  min-height: 100vh;
+}
+
+/* Glass Container */
+.container {
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  background: rgba(241, 203, 105, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form */
+form {
+  display: flex;
+  gap: 10px;
+}
+
+form input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+/* Add Button */
+form button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #00c9a7;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #00b894;
+  transform: scale(1.05);
+}
+
+/* Search + Filter */
+input[type="text"] {
+  margin-top: 10px;
+  width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+select {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-left: 10px;
+}
+
+/* Task List */
+ul {
+  margin-top: 20px;
+  padding: 0;
+}
+
+/* Task Item */
+li {
+  list-style: none;
+  margin: 12px 0;
+  padding: 15px;
+  border-radius: 15px;
+  background: rgba(25, 79, 167, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+
+/* Hover Animation */
+li:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* Task Text */
+li span {
+  flex: 1;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Buttons */
+li button {
+  margin-left: 8px;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Delete */
+li button:nth-child(2) {
+  background: #ff4d4d;
+  color: white;
+}
+
+/* Edit */
+li button:nth-child(3) {
+  background: #00c9a7;
+  color: white;
+}
+
+/* Button Hover */
+li button:hover {
+  transform: scale(1.1);
+}
+
+/* Completed Task */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Empty Message */
+p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  select {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
