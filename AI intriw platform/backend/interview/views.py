@@ -70,3 +70,49 @@ def generate_feedback(answers):
         "Improve confidence and technical depth. "
         "Practice more coding and project explanation."
     )
+
+
+
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+import json
+
+
+@csrf_exempt
+def signup(request):
+    data = json.loads(request.body)
+
+    username = data.get("username")
+    email = data.get("email")
+    password = data.get("password")
+
+    if User.objects.filter(username=username).exists():
+        return JsonResponse({"error": "User already exists"}, status=400)
+
+    User.objects.create_user(
+        username=username,
+        email=email,
+        password=password
+    )
+
+    return JsonResponse({"message": "Signup successful"})
+
+
+@csrf_exempt
+def login_user(request):
+    data = json.loads(request.body)
+
+    username = data.get("username")
+    password = data.get("password")
+
+    user = authenticate(username=username, password=password)
+
+    if user:
+        return JsonResponse({
+            "message": "Login successful",
+            "username": user.username
+        })
+
+    return JsonResponse({"error": "Invalid credentials"}, status=400)
